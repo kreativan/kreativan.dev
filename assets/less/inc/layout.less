@@ -1,0 +1,22 @@
+@tm-menu-bar-width: 90px;
+
+.tm-bg-dark {
+  background: @tm-black;
+}
+
+#__nuxt {
+  // padding-right: @tm-menu-bar-width;
+  overflow-x: hidden;
+}
+
+#menu-bar {
+  position: absolute;
+  background: white;
+  right:0;
+  top:0;
+  bottom:0;
+  width:@tm-menu-bar-width;
+  height:100%;
+  z-index:99;
+  border-left:1px solid @global-muted-background;
+}
