@@ -3,7 +3,7 @@
 @tm-font-mono: 'JetBrains Mono', monospace;
 
 
-@tm-black: #110f10;
+@tm-black: #1C1B20;
 
 // Layout
 // ========================================================================
@@ -75,7 +75,7 @@
 
 @base-heading-font-family:                      @tm-font;
 @global-font-family:                            @tm-font-base;
-@global-font-size:                              16px;
+@global-font-size:                              18px;
 @global-line-height:                            1.7;      // 24px
 
 @base-body-font-weight:                         normal;
@@ -93,11 +93,13 @@
 @text-large-font-size:                           1.1rem;
 @text-large-line-height:                        @global-line-height;
 
+@base-h3-line-height:                           1.6;
+
 //
 // Colors
 //
 
-@global-color:                                  #111111;
+@global-color:                                  @tm-black;
 @global-emphasis-color:                         @tm-black;
 @global-muted-color:                            #8d99a7;
 
@@ -183,9 +185,9 @@
 @global-inverse-color:                          #fff;
 
 @inverse-global-color-mode:                     light;
-@inverse-global-color:                          fade(@global-inverse-color, 85%);
+@inverse-global-color:                          fade(@global-inverse-color, 100%);
 @inverse-global-emphasis-color:                 @global-inverse-color;
-@inverse-global-muted-color:                    fade(@global-inverse-color, 60%);
+@inverse-global-muted-color:                    fade(@global-inverse-color, 70%);
 @inverse-global-inverse-color:                  @global-color;
 
 @inverse-global-primary-background:             @global-inverse-color;

@@ -3,7 +3,38 @@
 =========================================================== */
 
 #header {
+
   height: 80px;
   padding: 0 @global-gutter;
   box-sizing: border-box;
+
+  &.header-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+    max-width: 100%;
+    z-index: 99;
+  }
+
+  &.active-header:not(.uk-active) {
+     & + .uk-sticky-placeholder {
+      height: 0;
+    }
+    .burger-menu {
+      opacity: 0;
+    }
+  }
+  &.uk-active {
+    background: white;
+    z-index: 999;
+  }
+
+  @media(min-width: @breakpoint-xlarge) {
+    padding: 0 @global-large-gutter;
+    &:not(.uk-active) {
+      margin:20px 0;
+    }
+  }
 }

@@ -1,3 +1,5 @@
+@tm-menu-bar-width: 120px;
+
 /* =========================================================== 
   Hero
 =========================================================== */
@@ -12,4 +14,51 @@
     animation-delay: .5s !important;
   }
 
+}
+
+#hero-bar {
+  position: absolute;
+  background: white;
+  right:0;
+  top:0;
+  bottom:0;
+  width:@tm-menu-bar-width;
+  height:100%;
+  z-index:99;
+  border-left:1px solid @global-muted-background;
+  .social-links {
+    position:absolute;
+    top:50%;
+    left:0;
+    transform: rotate(-90deg) translateX(-50%);
+    white-space: nowrap;
+    max-width:100%;
+    a {
+      display:inline-block;
+      font-size:0.9rem;
+      color: @global-muted-color !important;
+      margin-right: 20px;
+      &:hover {
+        color: @global-color !important;
+      }
+    }
+  }
+  
+  .burger-menu {
+    margin-top: @global-gutter;
+    @media(min-width: @breakpoint-xlarge) {
+      margin-top: @global-medium-gutter;
+    }
+  }
+
+  transform: translate(0px);
+  transition: transform .3s;
+
+}
+
+
+.uk-active + .uk-sticky-placeholder + #home {
+  #hero-bar {
+    transform: translate(@tm-menu-bar-width + 5px);
+  }
 }

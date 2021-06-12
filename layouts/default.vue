@@ -1,11 +1,17 @@
 <template>
   <div>
+    <Menu />
     <Header />
     <Nuxt />
-    <Menu />
-    <MenuBar />
+    <Footer />
   </div>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
 
 <style>
 

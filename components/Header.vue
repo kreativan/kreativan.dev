@@ -1,22 +1,29 @@
 <template>
-  <div id="header" class="uk-flex uk-flex-middle uk-flex-between">
+  <header id="header" :class="cls"
+    class="uk-flex uk-flex-middle uk-flex-between" 
+    uk-sticky="top: 400; animation: uk-animation-slide-top"
+  >
     <div class="logo tm-font uk-h3 uk-margin-remove uk-text-bold">
       I.M
     </div>
     <div>
-      <a href="#offcanvas-menu" uk-toggle>Menu</a>
+      <a href="#offcanvas-menu" uk-toggle class="uk-link-reset">
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ["cls"]
+}
 </script>
 
 <style>
-#header {
-  position:absolute;
-  top: 0;
-  width:100%;
-}
+
 </style>

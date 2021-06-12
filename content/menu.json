@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "title": "Home",
+      "seo_title": "Ivan Milincic | kreativan.dev",
+      "name": "index",
+      "href": "/"
+    },
+    {
+      "title": "About Me",
+      "seo_title": "About Ivan Milincic",
+      "name": "about",
+      "href": "/about/"
+    },
+    {
+      "title": "Services",
+      "seo_title": "Web development services",
+      "name": "services",
+      "href": "/services/",
+      "submenu": [
+        {
+          "title": "Web Development",
+          "name": "web-development",
+          "href": "/services/web-development/"
+        }
+      ]
+    },
+    {
+      "title": "My Work",
+      "seo_title": "Ivan Milincic | Kreativan | Portfolio",
+      "name": "portfolio",
+      "href": "/portfolio/"
+    },
+    {
+      "title": "Hire Me",
+      "seo_title": "Contact",
+      "name": "hire-me",
+      "href": "/hire-me/"
+    }
+  ]
+}

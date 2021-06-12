@@ -1,7 +1,7 @@
 /* =========================================================== 
   Animation
 =========================================================== */
-.img-anim:after {
+.reveal-anim:after {
   content: "";
   position:absolute;
   display:block;
@@ -9,12 +9,12 @@
   height:100%;
   top:0;
   background: white;
-  animation: revealBack 2s cubic-bezier(0.77, 0, 0.175, 1) both;
-  z-index: 2;
+  animation: revealBack 1.5s cubic-bezier(0.77, 0, 0.175, 1) both;
+  z-index: 98;
 }
 
 
-.img-anim:before {
+.reveal-anim:before {
   content: "";
   display:block;
   height: 100%;
@@ -23,13 +23,18 @@
   right:0;
   bottom:0;
   width: 100%;
-  background: #110f10;
-  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) both;
-  z-index: 3;
+  background: @tm-black;
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) both;
+  z-index: 99;
 }
 
-.img-anim.img-anim-muted:before {
+.reveal-anim.reveal-anim-muted:before {
   background: @global-muted-background; 
+}
+
+.reveal-anim-long:after,
+.reveal-anim-long:before {
+  animation-duration: 2s !important;
 }
 
 @keyframes reveal {

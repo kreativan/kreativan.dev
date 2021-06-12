@@ -1,0 +1,31 @@
+.burger-menu {
+  display:inline-block;
+  width: 30px;
+  span {
+    display: block;
+    height: 2px;
+    background: @tm-black;
+    width:100%;
+    transition: all .3s;
+    & + span {
+      margin-top: 7px;
+    }
+  }
+  &:hover {
+    span {
+      width:90%;
+    }
+    span:first-child {
+      width:105%;
+    }
+    span:last-child {
+      width:110%;
+    }
+  }
+}
+
+.uk-light {
+  .burger-menu span {
+    background: white;
+  }
+}

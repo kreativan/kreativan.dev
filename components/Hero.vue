@@ -3,7 +3,7 @@
     <div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid>
       <div class="uk-width-auto@m" style="width: 45%;">
         <div class="uk-height-1-1 uk-flex uk-flex-middle">
-          <div id="hero-content" class="uk-padding">
+          <div id="hero-content" class="uk-padding-large">
             <h3 class="uk-h1 uk-margin-small uk-animation-slide-left-small">
               {{ subtitle }}
             </h3>   
@@ -17,11 +17,12 @@
         </div>
       </div>
       <div class="uk-width-auto@m" style="width: 55%">
-        <div class="img-anim uk-position-relative uk-overflow-hidden">
+        <div class="reveal-anim reveal-anim-long uk-position-relative uk-overflow-hidden">
           <img class="uk-cover" :src='`${image}`' uk-cover style="width:100%; height: 100%; object-fit: cover;" />
         </div>
       </div>
     </div>
+    <HeroBar />
   </div>
 </template>
 
