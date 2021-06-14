@@ -1,7 +1,7 @@
 <template>
   <div>
     <Menu />
-    <Header />
+    <Header cls="header-default" />
     <Nuxt />
     <Footer />
   </div>

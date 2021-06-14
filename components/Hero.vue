@@ -1,24 +1,24 @@
 <template>
-  <div id="hero" class="uk-position-relative">
+  <div id="hero" class="uk-position-relative" :class="{'is-loaded': isLoaded}">
     <div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid>
-      <div class="uk-width-auto@m" style="width: 45%;">
+      <div class="hero-left uk-width-auto">
         <div class="uk-height-1-1 uk-flex uk-flex-middle">
-          <div id="hero-content" class="uk-padding-large">
-            <h3 class="uk-h1 uk-margin-small uk-animation-slide-left-small">
+          <div id="hero-content" class="uk-margin-top">
+            <h3 class="uk-h2 uk-margin-small uk-animation-slide-bottom-medium">
               {{ subtitle }}
             </h3>   
-            <h1 class="uk-heading-medium uk-text-bold uk-margin-remove-top uk-animation-slide-left-small">
+            <h1 class="uk-heading-medium uk-text-bold uk-margin-remove-top uk-animation-slide-bottom-medium">
               {{ headline }}
             </h1>
-            <p class="uk-animation-slide-bottom-small uk-width-4-5@m">
+            <p class="uk-width-5-6@m uk-animation-slide-bottom-medium">
               {{ text }}
             </p>
           </div>   
         </div>
       </div>
-      <div class="uk-width-auto@m" style="width: 55%">
+      <div class="hero-right uk-width-auto">
         <div class="reveal-anim reveal-anim-long uk-position-relative uk-overflow-hidden">
-          <img class="uk-cover" :src='`${image}`' uk-cover style="width:100%; height: 100%; object-fit: cover;" />
+          <img class="uk-positio-cover tm-object-fit" :src='`${image}`' />
         </div>
       </div>
     </div>
@@ -29,6 +29,16 @@
 <script>
 export default {
   props: ["headline", "subtitle", "text", "img"],
+  data() {
+    return {
+      isLoaded: false
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 800);
+  },
   computed: {
     image() {
       try {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Menu />
-    <Header class="header-absolute header-active uk-light" />
+    <Header class="header-cover header-absolute uk-light" />
     <Nuxt />
     <Footer />
   </div>

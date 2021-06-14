@@ -1,5 +1,5 @@
 <template>
-  <footer class="uk-padding uk-text-center uk-text-small">
+  <footer class="tm-bg-dark uk-light uk-padding uk-text-center uk-text-small">
     Made in Bulgaria & Serbia. Built with nuxt.js, hosted on GitHub adn Netlify
   </footer>
 </template>

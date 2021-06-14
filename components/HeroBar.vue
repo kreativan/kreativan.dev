@@ -1,5 +1,5 @@
 <template>
-  <div id="hero-bar" class="uk-flex uk-flex-between uk-flex-column uk-text-center">
+  <div id="hero-bar" class="uk-flex uk-flex-between uk-flex-column uk-text-center uk-visible@l">
     <a href="#offcanvas-menu" uk-toggle class="uk-link-reset">
       <div class="burger-menu">
         <span></span>

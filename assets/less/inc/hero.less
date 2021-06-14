@@ -1,4 +1,4 @@
-@tm-menu-bar-width: 120px;
+@tm-menu-bar-width: 100px;
 
 /* =========================================================== 
   Hero
@@ -10,8 +10,45 @@
     height: 100vh;
   }
 
-  #hero-content * {
-    animation-delay: .5s !important;
+  .hero-left {
+    width:45%;
+  }
+  .hero-right {
+    width:55%;
+  }
+
+  #hero-content {
+    padding: 0 @global-gutter;
+    @media(min-width: @breakpoint-xlarge) {
+      padding: 0 @global-medium-gutter;
+    }
+    @media(max-width: @breakpoint-small) {
+      padding: 0 @global-small-gutter;
+    }
+    h3 {
+      animation-duration: .7s;
+    }
+    h1 {
+      animation-delay: .3s;
+      animation-duration: .5s;
+    }
+    p {
+      animation-delay: .6s;
+      animation-duration: .3s;
+    }
+  }
+
+  @media(max-width: @breakpoint-medium) {
+    & > .uk-grid {
+      height: auto;
+    }
+    .hero-left {
+      width:100%;
+      margin-top:70px;
+    }
+    .hero-right {
+      width:100%;
+    }
   }
 
 }
@@ -45,7 +82,7 @@
   }
   
   .burger-menu {
-    margin-top: @global-gutter;
+    margin-top: @global-gutter + 5px;
     @media(min-width: @breakpoint-xlarge) {
       margin-top: @global-medium-gutter;
     }
@@ -53,6 +90,7 @@
 
   transform: translate(0px);
   transition: transform .3s;
+  // transition-delay: .1s;
 
 }
 

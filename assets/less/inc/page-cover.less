@@ -1,7 +1,11 @@
 
 #page-cover {
 
-  height:600px;
+  height:500px;
+  
+  @media(max-width: @breakpoint-small) { 
+    height:360px;
+  }
 
   &:before {
     content: "";
@@ -21,6 +25,10 @@
 
     @media(min-width: @breakpoint-xlarge) {
       padding: 0 @global-large-gutter;
+    }
+
+    @media(max-width: @breakpoint-small) { 
+      padding: 0;
     }
 
     .page-cover-caption {
@@ -51,9 +59,15 @@
   &.is-loaded {
     .page-cover-caption {
       padding-left:120px;
+      @media(max-width: @breakpoint-small) {
+        padding-left:0;
+      }
     }
     .page-cover-caption:before {
       width:100px;
+      @media(max-width: @breakpoint-small) {
+        width:0;
+      }
     }
   }
 

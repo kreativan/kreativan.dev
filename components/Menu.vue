@@ -1,6 +1,6 @@
 <template>
   <div id="offcanvas-menu" uk-offcanvas="flip: true; overlay: true">
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-overflow-hidden">
 
       <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close="ratio: 1.4"></button>
 
@@ -46,6 +46,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

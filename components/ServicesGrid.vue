@@ -1,5 +1,7 @@
 <template>
-  <div class="uk-grid uk-grid-large uk-child-width-1-3@m" uk-grid>
+  <div class="uk-grid uk-grid-large uk-child-width-1-3@m uk-child-width-1-2@s" uk-grid
+    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 200"
+  >
     <template  v-for="(item, index) in services">
       <div :key="index" :class="{ 'uk-grid-margin': index > 2 }">
         <div>
