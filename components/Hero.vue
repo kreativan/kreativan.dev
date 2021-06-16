@@ -7,7 +7,7 @@
             <h3 class="uk-h2 uk-margin-small uk-animation-slide-bottom-medium">
               {{ subtitle }}
             </h3>   
-            <h1 class="uk-heading-medium uk-text-bold uk-margin-remove-top uk-animation-slide-bottom-medium">
+            <h1 class="uk-heading-medium uk-text-bold tm-font-deco uk-margin-remove-top uk-animation-slide-bottom-medium">
               {{ headline }}
             </h1>
             <p class="uk-width-5-6@m uk-animation-slide-bottom-medium">
@@ -18,7 +18,12 @@
       </div>
       <div class="hero-right uk-width-auto">
         <div class="reveal-anim reveal-anim-long uk-position-relative uk-overflow-hidden">
-          <img class="uk-positio-cover tm-object-fit" :src='`${image}`' />
+          <nuxt-picture 
+            :src='`${img}`' 
+            format="webp"
+            class="tm-object-fit uk-display-block uk-width-1-1 uk-height-1-1"
+            sizes="xs:380px sm:640px md:1024px lg:700px"
+          />
         </div>
       </div>
     </div>
@@ -38,16 +43,6 @@ export default {
     setTimeout(() => {
       this.isLoaded = true;
     }, 800);
-  },
-  computed: {
-    image() {
-      try {
-        const img = require(`../assets/images/${this.img}`); 
-        return img 
-      } catch (error) {
-        return false
-      }
-    }
   }
 }
 </script>

@@ -1,7 +1,11 @@
 
 #page-cover {
 
-  height:500px;
+  height:480px;
+
+  @media(min-width: @breakpoint-xlarge) { 
+    height:600px;
+  }
   
   @media(max-width: @breakpoint-small) { 
     height:360px;
@@ -34,7 +38,8 @@
     .page-cover-caption {
 
       padding-left: 0px;
-      transition: padding .7s;
+      opacity: 0;
+      transition: padding .7s, opacity .3s;
 
       &:before {
         content: "";
@@ -48,6 +53,13 @@
         transition: width .7s;
       }
 
+      @media(max-width: @breakpoint-small) {
+        transform: translateY(150%);
+        transition: transform .5s;
+        transition-delay: .3s;
+      }
+
+
     }
 
   }
@@ -59,8 +71,10 @@
   &.is-loaded {
     .page-cover-caption {
       padding-left:120px;
+      opacity:1;
       @media(max-width: @breakpoint-small) {
         padding-left:0;
+        transform: translateY(0%);
       }
     }
     .page-cover-caption:before {

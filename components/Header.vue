@@ -1,12 +1,12 @@
 <template>
-  <header id="header" :class="cls"
+  <div id="header" :class="cls"
     class="uk-flex uk-flex-middle uk-flex-between" 
     uk-sticky="top: 300; animation: uk-animation-slide-top"
   >
     <div class="logo tm-font uk-h3 uk-margin-remove uk-text-bold">
       I.M
     </div>
-    <div>
+    <div class="menu">
       <a href="#offcanvas-menu"
         uk-toggle
         class="uk-flex uk-flex-middle uk-link-reset" 
@@ -18,7 +18,7 @@
         </div>
       </a>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>

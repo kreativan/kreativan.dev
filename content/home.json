@@ -3,13 +3,14 @@
     "title": "Ivan Milinčić",
     "subtitle": "Hello! I'm",
     "text": "Web developer based in Bulgaria. With a preference for front-end development and ProcessWire CMS. I provide freelance and outsourcing services.",
-    "image": "hero.png"
+    "image": "/images/hero.png"
   },
   "intro": {
     "title": "Web Design & Development",
     "text": "Solutions based on project requirements with the seamless implementation of the user interface and functionality."
   },
   "custom_websites": {
+    "image": "/images/hero.png",
     "subtitle": "Website Development",
     "title": "Custom Websites",
     "text": "Websites with custom design and functionality, SEO friendly, fast and optimized.<br /> From basic to advanced dynamic websites, webshops, directories... <br /> Long-term solutions, secure and easy to maintain. <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quos pariatur ipsam, corporis illo esse quas totam quam, eius accusamus odio, rerum at exercitationem? Soluta aspernatur eveniet veritatis a doloribus. "

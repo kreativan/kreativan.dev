@@ -1,6 +1,6 @@
 <template>
-  <footer class="tm-bg-dark uk-light uk-padding uk-text-center uk-text-small">
-    Made in Bulgaria & Serbia. Built with nuxt.js, hosted on GitHub adn Netlify
+  <footer class="tm-bg-dark uk-light uk-text-center ">
+    <p class="uk-margin-remove uk-text-small">Made in Bulgaria & Serbia. Built with nuxt.js, hosted on GitHub adn Netlify</p>
   </footer>
 </template>
 
@@ -12,7 +12,9 @@ export default {
 
 <style lang="less">
 footer {
-  border-top: 1px solid #ddd;
-  position:relative;
+  padding: 20px;
+  p {
+    color: fade(white, 50%); 
+  }
 }
 </style>

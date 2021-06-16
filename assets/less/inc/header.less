@@ -9,7 +9,7 @@
   box-sizing: border-box;
 
   @media(max-width: @breakpoint-small) {
-    padding: 0 @global-small-gutter;
+    padding: 0 @global-small-gutter + 10px;
     height:65px;
   }
 
@@ -24,7 +24,7 @@
   }
 
   & + .uk-sticky-placeholder {
-    height: 0 !important;
+    // height: 0 !important;
   }
 
   &.uk-active {
@@ -42,6 +42,17 @@
     padding: 20px @global-large-gutter;
     &:not(.uk-active) {
       margin:20px 0;
+    }
+  }
+
+  @media(max-width: @breakpoint-large) {
+    &.header-home:not(.uk-active) {
+      * {
+        color: white;
+      }
+      .burger-menu span {
+        background: white !important;
+      }
     }
   }
 

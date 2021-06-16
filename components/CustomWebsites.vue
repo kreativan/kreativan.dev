@@ -1,20 +1,25 @@
 <template>
   <div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid>
     <div class="uk-width-expand@m">
-      <div class="uk-panel">
-        <div class="uk-position-cover uk-overflow-hidden" 
+      <div class="uk-panel uk-overflow-hidden">
+        <div class="uk-height-1-1" 
           uk-scrollspy="cls: reveal-anim;delay: 500">
-        <img class="tm-object-fit" src="~assets/images/hero.png" />
+          <nuxt-picture 
+            :src='`${section.image}`' 
+            format="webp"
+            class="uk-position-cover tm-object-fit uk-display-block uk-width-1-1 uk-height-1-1"
+            sizes="xs:380px sm:640px xl:1280"
+          />
       </div>
       </div>
     </div>
-    <div class="uk-width-2-5@m">
-      <div class="uk-panel uk-padding uk-background-muted"
+    <div class="uk-width-1-2@m uk-width-1-3@xl">
+      <div class="uk-panel uk-padding-large uk-background-muted"
         uk-scrollspy="cls: uk-animation-slide-right-medium;delay: 500">
         <h3 class="uk-h5 tm-font-base uk-text-uppercase uk-margin-remove">
           {{ section.subtitle }}
         </h3>
-        <h2 class="uk-text-bold uk-margin-remove-top">
+        <h2 class="uk-margin-remove-top">
           {{ section.title }}
         </h2>
         <p v-html='section.text'></p>
@@ -29,6 +34,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>

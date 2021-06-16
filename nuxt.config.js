@@ -17,7 +17,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Playfair+Display:ital,wght@0,400;0,800;1,400&family=Roboto+Slab&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Playfair+Display:wght@400;800&display=swap',
       },
     ],
   },
@@ -32,7 +32,10 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    '@nuxt/image',
+    "@nuxtjs/svg"
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -45,4 +48,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  image: {
+    // The screen sizes predefined by `@nuxt/image`:
+    screens: {
+      xs: 380,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536
+    },
+  }
 }

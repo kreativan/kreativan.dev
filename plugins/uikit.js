@@ -7,4 +7,4 @@ import Icons from 'uikit/dist/js/uikit-icons'
 UIkit.use(Icons)
 
 // use it inside vue files as this.$uikit
-// Vue.prototype.$uikit = UIkit
+Vue.prototype.$uikit = UIkit
