@@ -13,9 +13,8 @@
 
         <p 
           v-if="page.intro" 
-          class="uk-h4 tm-font-deco uk-width-auto tm-scrollspy" 
+          class="uk-h4 tm-font-deco uk-width-auto" 
           v-html="page.intro"
-          uk-scrollspy="cls: uk-animation-slide-bottom-medium; delay: 300"  
         >
         </p>
 

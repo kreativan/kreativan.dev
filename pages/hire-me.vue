@@ -11,11 +11,10 @@
       
       <p
         v-html="page.intro" 
-        class="uk-width-4-5@l uk-h3 tm-font-deco tm-scrollspy"
-        uk-scrollspy="cls: uk-animation-fade; delay: 400">
+        class="uk-width-4-5@l uk-h3 tm-font-deco">
       </p>
-
-      <nuxt-content :document="page" />
+      
+      <nuxt-content :document="page"  />
 
     </div>
 

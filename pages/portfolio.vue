@@ -13,13 +13,13 @@
         :title="featured.title"
         :text="featured.intro"
         :image="featured.image"  
+        :href="featured.read_more ? featured.path + '/' : false"
+        :link="featured.link ? featured.link : false"
       />
 
-      <template v-for="item in portfolio">
-        <h2 :key="item.slug">{{ item.title }}</h2>
-      </template>
-
-      <nuxt-content :document="page" />
+      <div class="tm-scrollspy uk-margin-large" uk-scrollspy="cls: uk-animation-fade; delay: 600">
+        <PortfolioSlider :items="portfolio" />
+      </div>
 
     </div>
 
@@ -45,7 +45,8 @@ export default {
     .sortBy("createdAt", 'desc')
     .fetch()
     .catch((err) => {
-      error({ statusCode: 404, message: 'Page not found' })
+      // error({ statusCode: 404, message: 'Page not found' })
+      console.log(err)
     })
 
     return { 

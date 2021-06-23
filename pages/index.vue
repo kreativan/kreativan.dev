@@ -9,7 +9,7 @@
     />
 
     <div id="first" class="uk-section uk-section-large">
-      <div class="uk-container uk-container-xsmall uk-text-center">
+      <div class="uk-width-xlarge uk-margin-auto uk-text-center">
         <h2 class="uk-h5 uk-text-uppercase uk-margin-small"
           uk-scrollspy="cls: uk-animation-slide-bottom-medium;delay: 300"
         >
@@ -36,13 +36,13 @@
     <div class="uk-section uk-section-large">
       <div class="uk-container uk-container-xsmall uk-text-center">
 
-        <h2 class="uk-h5 uk-text-uppercase tm-font-base uk-margin-small"
+        <h2 class="uk-h4 uk-text-uppercase tm-font-base uk-margin-small"
           uk-scrollspy="cls: uk-animatio-fade;delay: 300"
         >
           {{ contact.title }}
         </h2>
 
-        <p class="uk-h3 uk-margin-remove" v-html='contact.text'
+        <p class="uk-h3 tm-font-deco uk-margin-remove" v-html='contact.text'
         uk-scrollspy="cls: uk-animation-fade; delay: 300"></p>
         
         <div class="uk-margin" uk-scrollspy="cls: uk-animation-scale-up; delay: 300">
@@ -50,7 +50,7 @@
         </div>
 
         <a :href="`mailto: ${contact.email}`"
-          class="uk-inline uk-h4 uk-margin-remove uk-link-reset tm-font uk-text-bold"
+          class="uk-inline uk-h3 uk-margin-remove uk-link-reset tm-font uk-text-bold"
           uk-scrollspy="cls: uk-animation-slide-bottom-medium;delay: 600"
         >
           {{ contact.email }}

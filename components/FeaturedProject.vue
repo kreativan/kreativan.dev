@@ -1,21 +1,36 @@
 <template>
-  <div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid>
-    <div class="uk-width-expand@m">
-      <div class="uk-panel uk-overflow-hidden"
-        uk-scrollspy="cls: reveal-anim; delay: 500;">
+  <div class="uk-grid uk-grid-collapse uk-grid-match uk-background-muted" uk-grid>
+    <div class="uk-width-1-2@m">
+      <div class="uk-panel uk-overflow-hidden tm-scrollspy"
+        uk-scrollspy="cls: reveal-anim, reveal-anim-muted; delay: 500;">
         <nuxt-picture 
             :src='`${image}`' 
             format="webp"
-            class=" uk-position-cover tm-object-fit uk-display-block"
+            class="tm-object-fit uk-display-block"
           />
       </div>
     </div>  
     <div class="uk-width-expand@m">
-      <div class="uk-panel uk-padding uk-background-muted tm-scrollspy"
-        uk-scrollspy="cls: uk-animation-slide-right-medium; delay: 1000;">
-        <span class="uk-text-uppercase uk-text-small">Featured</span>
-        <h2 class="uk-margin-remove-top">{{ title }}</h2>
-        <p>{{ text }}</p>
+      <div class="uk-panel uk-padding uk-background-muted uk-flex uk-flex-middle">
+        <div class="tm-scrollspy uk-padding-small" uk-scrollspy="cls: uk-animation-fade; delay: 500;">
+          <span class="uk-text-uppercase uk-text-small">Featured</span>
+          <h2 class="uk-margin-remove-top">{{ title }}</h2>
+          <p>{{ text }}</p>
+          <div>
+            <NuxtLink v-if="href" :to="href" class="uk-button uk-button-text uk-margin-right">
+              Read More
+            </NuxtLink>
+            <a v-if="link" :href="link" 
+              target="_blank" 
+              rel="nofollow noopener"
+              :title="title"
+              class="uk-button uk-link-reset"
+            >
+              Preview
+              <span uk-icon="icon: arrow-right; ratio: 1.3"></span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -23,7 +38,7 @@
 
 <script>
 export default {
-  props: ["title", "text", "image"]
+  props: ["title", "text", "image", 'href', "link"]
 }
 </script>
 

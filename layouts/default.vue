@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Menu />
     <Header cls="header-default" />
     <Nuxt />
     <Footer />
+    <Menu />
   </div>
 </template>
 
@@ -13,8 +13,16 @@ export default {
     $route () {
       const element = document.querySelector("#offcanvas-menu");
       this.$uikit.offcanvas(element).hide()
-      const navEl = document.querySelectorAll("#offcanvas-menu .uk-nav");
-      this.$uikit.nav(navEl).toggle(0, true);
+      const navEl = document.querySelectorAll("#offcanvas-menu .uk-nav li.uk-parent.uk-open");
+      if(navEl && navEl.length > 0) {
+        setTimeout(() => {
+          navEl.forEach(function(e) { 
+            e.classList.remove("uk-open")
+            let subnav = e.querySelector(".uk-nav-sub")
+            if(subnav) subnav.setAttribute("hidden", "")
+          })
+        }, 300);
+      }
     }
   },
 }

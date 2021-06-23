@@ -39,10 +39,6 @@
     {
       "title": "Static Websites",
       "text": "Blazing fast JAMStack websites with nuxt.js, github and netlify..."
-    },
-    {
-      "title": "Long Term Solutions",
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quos pariatur ipsam."
     }
   ],
   "contact": {

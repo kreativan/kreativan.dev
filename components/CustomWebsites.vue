@@ -8,13 +8,13 @@
             :src='`${section.image}`' 
             format="webp"
             class="uk-position-cover tm-object-fit uk-display-block uk-width-1-1 uk-height-1-1"
-            sizes="xs:380px sm:640px xl:1280"
+            sizes="xs:380px sm:640px xl:960"
           />
       </div>
       </div>
     </div>
-    <div class="uk-width-1-2@m uk-width-1-3@xl">
-      <div class="uk-panel uk-padding-large uk-background-muted"
+    <div class="uk-width-1-2@m uk-width-expand@xl uk-background-muted">
+      <div class="uk-panel uk-padding-large uk-background-muted uk-width-4-5@xl"
         uk-scrollspy="cls: uk-animation-slide-right-medium;delay: 500">
         <h3 class="uk-h5 tm-font-base uk-text-uppercase uk-margin-remove">
           {{ section.subtitle }}

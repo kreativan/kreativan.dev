@@ -1,8 +1,11 @@
 <template>
-  <div id="header" :class="cls"
+<div>
+  <div id="header"
     class="uk-flex uk-flex-middle uk-flex-between" 
+    :class="cls"
     uk-sticky="top: 300; animation: uk-animation-slide-top"
   >
+
     <div class="logo tm-font uk-h3 uk-margin-remove uk-text-bold">
       I.M
     </div>
@@ -18,7 +21,9 @@
         </div>
       </a>
     </div>
+
   </div>
+ </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="hero" class="uk-position-relative" :class="{'is-loaded': isLoaded}">
+  <div id="hero" class="uk-position-relative uk-overflow-hidden" :class="{'is-loaded': isLoaded}">
     <div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid>
       <div class="hero-left uk-width-auto">
         <div class="uk-height-1-1 uk-flex uk-flex-middle">
@@ -22,7 +22,7 @@
             :src='`${img}`' 
             format="webp"
             class="tm-object-fit uk-display-block uk-width-1-1 uk-height-1-1"
-            sizes="xs:380px sm:640px md:1024px lg:700px"
+            sizes="xs:380px sm:640px md:1024px lg:700px xl:1050px"
           />
         </div>
       </div>

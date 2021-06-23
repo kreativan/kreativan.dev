@@ -8,7 +8,7 @@
 
   .page-headline {
 
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
 
     p {
@@ -29,37 +29,30 @@
       }
     }
 
-    &.is-loaded {
-      opacity:1;
-      @media(min-width: @breakpoint-medium) {
-        p {
-          padding-left:120px;
-          &:before {
-            width:100px;
-          }
-        }
+  }
+
+  &.is-loaded {
+    p {
+      padding-left:120px;
+      &:before {
+        width:100px;
       }
     }
-
   }
 
   @media(max-width: @breakpoint-medium) {
 
-    margin-top:@global-gutter !important;
+    margin-top: @global-gutter !important;
 
     .page-image.uk-container {
       padding: 0 !important;
     }
-    
-    .page-headline {
+
+    &.is-loaded {
       p {
-        transform: translateY(100px);
-        transition: .5s;
-        transition-delay: .3s;
-      }
-      &.is-loaded {
-        p {
-          transform: translateY(0);
+        padding-left:0;
+        &:before {
+          width:0;
         }
       }
     }

@@ -8,14 +8,13 @@
     />
 
     
-    <div class="uk-container uk-section">
+    <div class="uk-container uk-section" uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 400">
       <template v-for="(item, key) in page.blocks">
         <div :key="key" class="uk-margin-medium">
           <TextBlock
             :label="key"
             :title="item.title"
             :text="item.text"
-            animation="true"
           />
         </div>
       </template>
@@ -23,7 +22,7 @@
       <div
         class="uk-grid uk-grid-large"
         uk-grid
-        uk-scrollspy="cls: uk-animation-slide-bottom-medium; delay: 300"
+        uk-scrollspy="cls: uk-animation-slide-bottom-medium; delay: 500"
       >
         <div class="uk-width-1-3@m">
           <h5 class="uk-text-uppercase uk-text-muted uk-margin-small-bottom">

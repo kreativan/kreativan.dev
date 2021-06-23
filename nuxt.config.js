@@ -17,7 +17,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Playfair+Display:wght@400;800&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Playfair+Display:wght@400&display=swap',
       },
     ],
   },
