@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="layout-default">
     <Header cls="header-default" />
     <Nuxt />
     <Footer />

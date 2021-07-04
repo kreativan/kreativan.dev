@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="layout-homepage">
     <Header cls="header-home header-absolute" />
     <Nuxt />
     <Footer />

@@ -14,12 +14,26 @@
                 sizes="xs:280px sm:430px lg:680px xl:900px"
                 fit="inside"
                 class="uk-width-1-1"
+                :alt="item.title"
               />
               <div class="uk-padding-small uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom uk-flex uk-flex-between uk-flex-middle">
-                <h3 class="uk-h5 uk-margin-remove">{{ item.title }}</h3>
-                <span uk-icon="icon: arrow-right; ratio:1.6"></span>
+                <h3 class="uk-h5 uk-margin-remove">
+                  {{ item.title }}
+                </h3>
+                <a v-if="item.link" 
+                  :href="item.link" 
+                  target="_blank" 
+                  rel="nofollow noopener" 
+                  class="uk-icon-button" 
+                  uk-icon="arrow-right"
+                  :title="item.title"
+                >
+                  <i uk-icon="link"></i>
+                </a>
               </div>
+              <!--
               <a v-if="item.link" :href="item.link" target="_blank" rel="nofollow noopener" class="uk-position-cover"></a>
+              -->
             </div>
           </li>
         </template>

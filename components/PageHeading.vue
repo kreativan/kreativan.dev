@@ -19,6 +19,7 @@
             height="400px"
             class="uk-display-block"
             sizes="xs:380px sm:640px lg:1024px xl:1200px"
+            :alt="title"
           />
         </div>
       </div>

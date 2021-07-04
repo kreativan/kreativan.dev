@@ -9,6 +9,7 @@
             format="webp"
             class="uk-position-cover tm-object-fit uk-display-block uk-width-1-1 uk-height-1-1"
             sizes="xs:380px sm:640px xl:960"
+            :alt="section.title"
           />
       </div>
       </div>

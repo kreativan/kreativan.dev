@@ -1,0 +1,42 @@
+@icon-image-size:                               20px;
+
+@icon-link-color:                               @global-muted-color;
+@icon-link-hover-color:                         @global-color;
+@icon-link-active-color:                        darken(@global-color, 5%);
+
+@icon-button-size:                              36px;
+@icon-button-border-radius:                     500px;
+@icon-button-background:                        @tm-black;
+@icon-button-color:                             fade(white, 90%);
+
+@icon-button-hover-background:                  @tm-black;
+@icon-button-hover-color:                       white;
+
+@icon-button-active-background:                 @tm-black;
+@icon-button-active-color:                      white;
+
+
+/* ========================================================================
+   Component: Icon
+========================================================================== */
+
+.uk-icon-button {
+  overflow: hidden;
+  position: relative;
+  i {
+    transition: transform .5s;
+    & + svg {
+      position:absolute;
+      transform: translateX(-150%);
+      transition: transform .5s;
+    }
+  }
+  &:hover {
+    i {
+      transform: translateX(150%);
+      & + svg {
+        transform: translateX(0);
+      }
+    }
+  }
+}

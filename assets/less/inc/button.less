@@ -1,0 +1,53 @@
+/* =========================================================== 
+  Button
+=========================================================== */
+
+.tm-button-icon {
+
+  display: inline-flex;
+  align-items: center;
+  font-size:0.85rem;
+  text-transform: uppercase;
+  position: relative;
+  color: @global-emphasis-color;
+  height: @global-control-height;
+
+  span {
+    display:inline-block;
+    position: relative;
+    background: @tm-black;
+    color: fade(white, 90%);
+    margin-left: 10px;
+    width: 36px;
+    height: 36px;
+    background:@tm-black;
+    //top: 9px;
+    border-radius: 50%;
+    overflow: hidden;
+    i {
+      position:absolute;
+      top:50%;
+      left: 50%;
+      margin-top:-10px;
+      margin-left:-10px;
+      transform: translateX(0);
+      transition: transform .5s;
+      &:last-child {
+        transform: translateX(-150%);
+      }
+    }
+  }
+
+  &:hover {
+    color: @global-emphasis-color;
+    text-decoration: none;
+    span i {
+      &:first-child {
+        transform: translateX(150%);
+      }
+      &:last-child {
+        transform: translateX(0);
+      }
+    }
+  }
+}
