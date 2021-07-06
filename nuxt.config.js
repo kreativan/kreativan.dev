@@ -11,7 +11,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Web developer based in Bulgaria. With a preference for front-end development and ProcessWire CMS. I provide freelance and outsourcing services.',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -32,10 +37,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxt/image',
-    "@nuxtjs/svg"
-  ],
+  buildModules: ['@nuxt/image', '@nuxtjs/svg'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -57,7 +59,7 @@ export default {
       md: 768,
       lg: 1024,
       xl: 1280,
-      xxl: 1536
+      xxl: 1536,
     },
-  }
+  },
 }

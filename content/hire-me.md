@@ -1,4 +1,9 @@
 ---
+seo: 
+  title: Hire Me - Web Developer for Hire
+  description: I'm a web developer building custom websites at any scale. I prefer front-end development and ProcessWire CMS. I work remotely, from Sofia, Bulgaria.
+
+
 title: Hire Me
 caption: Need a web developer?
 intro: I'm a web developer building custom websites at any scale. I prefer front-end development and ProcessWire CMS. I work remotely, from Sofia, Bulgaria.

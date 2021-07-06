@@ -46,6 +46,28 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Ivan Milincic Portfolio",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.seo.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.seo.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.seo.description
+        }
+      ],
+    }
+  },
   async asyncData({ $content, params, error }) {
 
     const portfolioPage = await $content('portfolio-page').fetch()
@@ -87,6 +109,7 @@ export default {
     })
 
     return { 
+      seo: portfolioPage.seo,
       page: portfolioPage,
       featured: featured[0],
       slider: slider,

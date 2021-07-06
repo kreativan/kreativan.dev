@@ -44,14 +44,43 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.seo.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.seo.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.seo.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.seo.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.seo.image
+        }
+      ],
+    }
+  },
   data() {
     return {
       page: {},
+      seo: {}
     }
   },
   async fetch() {
     const page = await this.$content('about').fetch()
     this.page = page
+    this.seo = page.seo
   },
 }
 </script>

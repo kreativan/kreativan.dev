@@ -29,6 +29,11 @@
           "href": "/services/web-development/"
         },
         {
+          "title": "Static Websites",
+          "name": "static-websites",
+          "href": "/services/static-websites/"
+        },
+        {
           "title": "Outsourcing",
           "name": "outsourcing",
           "href": "/services/outsourcing/"

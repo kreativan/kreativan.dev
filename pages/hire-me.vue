@@ -23,6 +23,28 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.page.seo.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.page.seo.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.page.seo.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.page.seo.description
+        }
+      ],
+    }
+  },
   async asyncData({ $content, params, error }) {
     const page = await $content('hire-me').fetch()
     return { page }
