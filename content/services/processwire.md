@@ -1,6 +1,6 @@
 ---
 title: Processwire Developer
-subtitle: Open source CMS and web application framework
+subtitle: Processwire development, front-end, modules, integrations, custom admin features...
 image: /images/processwire.jpg
 container: small
 
@@ -9,7 +9,7 @@ intro: I am a web developer focused on the ProcessWire CMS. I develop websites w
 blocks:
   About: 
     title: What is ProcessWire?
-    text: ProcessWire is a open-source CMS/CMF for building scalable websites and apps. Super fast and rock solid platform, without endless updates and tons of plugins to worry about. 
+    text: Open source CMS and web application framework. Super fast and rock solid platform, without endless updates and tons of plugins to worry about. 
 
   Modules:
     title: Custom Modules

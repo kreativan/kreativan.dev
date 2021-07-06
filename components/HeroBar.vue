@@ -8,14 +8,14 @@
       </div>
     </a>
     <div class="social-links">
-      <a class="uk-link-reset" href="https://www.linkedin.com/in/kreativan-dev/" target="_blank" rel="nofollow noopener">
+      <a class="uk-link-reset" href="https://www.linkedin.com/in/kreativan-dev/" target="_blank" rel="nofollow noreferrer noopener" title="Ivan Milincic LinkedIn">
         LinkedIn
       </a>
-      <a class="uk-link-reset" href="https://twitter.com/lokomotivan/" target="_blank" rel="nofollow noopener">
+      <a class="uk-link-reset" href="https://twitter.com/lokomotivan/" target="_blank" rel="nofollow noreferrer noopener" title="Ivan Milincic Twitter">
         Twitter
       </a>
-      <a class="uk-link-reset" href="https://github.com/kreativan/" target="_blank" rel="nofollow noopener">
-        Github
+      <a class="uk-link-reset" href="https://github.com/kreativan/" target="_blank" rel="nofollow noreferrer noopener" title="Ivan Milincic Github">
+        GitHub
       </a>
     </div>
     <div>
