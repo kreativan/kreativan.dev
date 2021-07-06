@@ -22,7 +22,7 @@
             :src='`${img}`' 
             format="webp"
             class="tm-object-fit uk-display-block uk-width-1-1 uk-height-1-1"
-            sizes="xs:380px sm:640px md:1024px lg:700px xl:1050px"
+            sizes="xs:800px sm:640px md:1024px lg:700px xl:1050px"
             :alt="headline"
           />
         </div>

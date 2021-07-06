@@ -52,4 +52,11 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media(max-width: 960px) {
+  .uk-panel .uk-height-1-1 picture {
+    position:relative;
+    height:300px;
+  }
+}
+</style>

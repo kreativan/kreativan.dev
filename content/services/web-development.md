@@ -1,7 +1,7 @@
 ---
 title: Web Development
 subtitle: Front-End & ProcessWire Web Development
-image: /images/work-desk.jpg
+image: /images/development.jpg
 container: small
 
 intro: I develop features based on project requirements, using modern front-end in combination with open-source platforms, processwire, github, netlify...

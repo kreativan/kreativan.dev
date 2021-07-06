@@ -8,18 +8,20 @@
     />
 
     <div id="first" class="uk-section uk-section-large uk-section-muted">
-      <div class="uk-width-2-5@m uk-margin-auto uk-text-center">
-        <h2
-          class="uk-h5 uk-text-uppercase uk-margin-small"
-          uk-scrollspy="cls: uk-animation-slide-bottom-medium;delay: 300"
-        >
-          {{ intro.title }}
-        </h2>
-        <p
-          class="uk-h3 uk-margin-remove tm-font-deco"
-          uk-scrollspy="cls: uk-animation-slide-bottom-medium;delay: 600"
-          v-html="intro.text"
-        ></p>
+      <div class="uk-container">
+        <div class="uk-width-3-5@m uk-margin-auto uk-text-center">
+          <h2
+            class="uk-h5 uk-text-uppercase uk-margin-small"
+            uk-scrollspy="cls: uk-animation-slide-bottom-medium;delay: 300"
+          >
+            {{ intro.title }}
+          </h2>
+          <p
+            class="uk-h3 uk-margin-remove tm-font-deco"
+            uk-scrollspy="cls: uk-animation-slide-bottom-medium;delay: 600"
+            v-html="intro.text"
+          ></p>
+        </div>
       </div>
     </div>
 

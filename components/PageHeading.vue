@@ -16,7 +16,7 @@
           <nuxt-picture
             :src="`${image}`"
             format="webp"
-            height="480px"
+            height="420px"
             class="uk-display-block"
             sizes="xs:380px sm:640px lg:1024px xl:1200px"
             :alt="title"
