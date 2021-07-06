@@ -7,7 +7,7 @@
   >
 
     <div class="logo tm-font uk-h3 uk-margin-remove uk-text-bold">
-      I.M
+      <NuxtLink class="uk-link-reset" to="/" title="Ivan Milincic Web Developer">I.M</NuxtLink>
     </div>
     <div class="menu">
       <a href="#offcanvas-menu"

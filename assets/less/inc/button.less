@@ -51,3 +51,38 @@
     }
   }
 }
+
+
+.tm-button-line {
+  position: relative;
+  padding-left: 25px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all .5s;
+  color: @tm-black;
+  
+  &:before {
+    content: "";
+    position:absolute;
+    left:0;
+    top:50%;
+    width: 20px;
+    height:2px;
+    transition: all .5s;
+    background:@tm-black;
+  }
+  &:hover {
+    color: @tm-black;
+    text-decoration: none;
+    padding-left: 40px;
+    &:before {
+      width: 35px;
+    }
+  }
+}
+
+.tm-bg-dark {
+  .tm-button-line:before {
+    background:white;
+  }
+}

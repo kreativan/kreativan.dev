@@ -1,8 +1,8 @@
 ---
 layout: featured
-title: Blok UI
-label: ProcessWire
-image: /images/hero.png
-link: http://core.kreativan.net
-desc: ProcessWire site profile based on uikit front-end framwork and custom modules. Set of modules, components and ui elements to standardize development workflow.
+title: BLOK UI
+label: Work in Progress...
+image: /images/workbook.jpg
+link: 
+desc: ProcessWire site profile based on uikit front-end framework and custom modules. Set of modules, components and ui elements to standardize development workflow.
 ---

@@ -1,9 +1,9 @@
 <template>
   <div class="text-block uk-grid uk-grid-large" uk-grid>
     <div class="uk-width-1-3@m">
-      <h5 class="uk-text-uppercase uk-text-muted uk-margin-small-bottom">
+      <h3 class="uk-h5 uk-text-uppercase uk-text-muted uk-margin-small-bottom">
         {{ label }}
-      </h5>
+      </h3>
     </div>
     <div class="uk-width-expand@m uk-margin-remove">
       <h2 v-if="title" class="uk-h3 uk-text-bold">
@@ -31,9 +31,11 @@ export default {
 </script>
 
 <style scoped>
-h5 {
+h3 {
   font-size: 0.9rem;
   letter-spacing: 1px;
+  position:relative;
+  top:2px;
 }
 @media(min-width: 1024px) {
   .uk-grid > div + div {

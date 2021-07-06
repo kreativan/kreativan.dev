@@ -22,7 +22,8 @@
           <div :key="key" class="uk-margin-medium">
             <TextBlock
               :label="key"
-              :text="item"
+              :title="item.title"
+              :text="item.text"
               animation="true"
             />
           </div>

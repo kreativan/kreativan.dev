@@ -8,7 +8,6 @@
     />
 
     <div class="uk-container uk-margin-large">
-
       <PortfolioFeatured
         :title="featured.title"
         :label="featured.label"
@@ -16,11 +15,10 @@
         :image="featured.image"  
         :link="featured.link ? featured.link : false"
       />
+    </div>
 
-      <div class="uk-margin-large">
-        <PortfolioSlider :items="slider" />
-      </div>
-
+    <div class="uk-container uk-container-xlarge uk-margin-large">
+      <PortfolioSlider :items="slider" />
     </div>
 
     <div class="uk-container uk-margin-large">
@@ -38,22 +36,9 @@
     </div>
 
     <div class="uk-container uk-margin-large">
-      <table class="uk-table uk-table-divider">
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Tech</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <template v-for="item in cards">
-          <tr :key="item.slug">
-            <td>{{ item.title }}</td>
-          </tr>
-          </template>
-        </tbody>
-      </table>
+      <PortfolioList
+        :list="list"
+      />
     </div>
 
   </div>
@@ -76,7 +61,7 @@ export default {
     
     const slider = await $content(`portfolio`)
     .where({ layout: 'slider'})
-    .sortBy("createdAt", 'desc')
+    .sortBy("updatedAt", 'desc')
     .fetch()
     .catch((err) => {
       // error({ statusCode: 404, message: 'Page not found' })
@@ -92,11 +77,21 @@ export default {
       console.log(err)
     })
 
+    const list = await $content(`portfolio`)
+    .where({ layout: 'list'})
+    .sortBy("createdAt", 'asc')
+    .fetch()
+    .catch((err) => {
+      // error({ statusCode: 404, message: 'Page not found' })
+      console.log(err)
+    })
+
     return { 
       page: portfolioPage,
       featured: featured[0],
       slider: slider,
-      cards: cards
+      cards: cards,
+      list: list
     }
   },
 }

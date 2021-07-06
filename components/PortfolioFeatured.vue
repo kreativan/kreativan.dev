@@ -29,7 +29,7 @@
             {{ label }}
           </span>
           <h2 class="uk-margin-remove-top">{{ title }}</h2>
-          <p>{{ text }}</p>
+          <p v-html="text"></p>
           <a
             v-if="link"
             :href="link"

@@ -19,14 +19,24 @@
       "href": "/services/",
       "submenu": [
         {
+          "title": "Custom Websites",
+          "name": "custom-websites",
+          "href": "/services/custom-websites/"
+        },
+        {
           "title": "Web Development",
           "name": "web-development",
           "href": "/services/web-development/"
         },
         {
-          "title": "Custom Websites",
-          "name": "custom-websites",
-          "href": "/services/custom-websites/"
+          "title": "Outsourcing",
+          "name": "outsourcing",
+          "href": "/services/outsourcing/"
+        },
+        {
+          "title": "ProcessWire",
+          "name": "processwire",
+          "href": "/services/processwire/"
         }
       ]
     },
