@@ -47,6 +47,6 @@ services:
     text: eCommerce online stores and webshops, based on open-source platforms. SnipCart, WooCommerce, OpenCart...
   - 
     title: Static Websites
-    text: Blazing fast JAMStack static websites with nuxt.js, github and netlify...
+    text: Blazing fast JAMStack static websites with nuxt.js, github and netlify... Git based content and APIs, with low maintaince costs
     link: /services/static-websites/
 ---
