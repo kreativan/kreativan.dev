@@ -1,7 +1,7 @@
 ---
 title: Outsourcing
 subtitle: Outsourcing services with long-term support and competitive pricing
-image: /images/outsourcing.jpg
+image: https://kreativan.dev/images/outsourcing.jpg
 container: small
 
 intro: Outsourcing services with long-term support and competitive pricing. With years of experience with ProcessWire and front-end development, can work in a team or build small to large scale projects from start to finish.

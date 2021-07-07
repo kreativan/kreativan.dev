@@ -1,7 +1,7 @@
 ---
 title: Custom Websites
 subtitle: SEO friendly, fast and optimised, custom websites
-image: /images/custom-websites-wide.jpg
+image: https://kreativan.dev/images/custom-websites-wide.jpg
 container: small
 
 intro: Websites with custom design and functionality, SEO friendly, fast and optimised.With a long-term support and easy to use content management system (CMS).

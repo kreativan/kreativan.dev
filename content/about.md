@@ -2,7 +2,7 @@
 seo: 
   title: About Me - Ivan Milincic - Kreativan - Web Developer
   description: Serbian web developer working and living in lovely Bulgaria.
-  image: images/hero.png
+  image: https://kreativan.dev/images/hero.png
 
 title: About Me
 caption: Serbian web developer working and living in lovely Bulgaria.

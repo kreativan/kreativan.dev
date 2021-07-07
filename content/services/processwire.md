@@ -1,7 +1,7 @@
 ---
 title: Processwire Developer
 subtitle: Processwire development, front-end, modules, integrations, custom admin features...
-image: /images/processwire.jpg
+image: https://kreativan.dev/images/processwire.jpg
 container: small
 
 intro: I am a web developer focused on the ProcessWire CMS. I develop websites with complex content management needs that take advantage of this powerful framework. Custom modules for all kind of needs, admin pages and UI, integration of 3rd party libraries...

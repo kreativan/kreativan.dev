@@ -1,7 +1,7 @@
 ---
 title: Static Websites
 subtitle: JAMStack baby! JavaScript, API, Markup....
-image: /images/custom-websites-wide-3.jpg
+image: https://kreativan.dev/images/custom-websites-wide-3.jpg
 container: small
 
 intro: Blazing fast static websites built with nuxt.js and deployed on github and netlify... Git based content and APIs, with low maintaince costs
