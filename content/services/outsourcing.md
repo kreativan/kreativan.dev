@@ -17,7 +17,7 @@ blocks:
 
   Collaboration:
     title: Long Term Collaboration
-    text: With preferecene for long term collaborations, i can be your reliable partner and provide long term support. I respond quickly and follow defined time frames. I can communicate directly with the clients and participate in meetings if nesesery...
+    text: With preference for long term collaborations, i can be your reliable partner and provide long term support. I respond quickly and follow defined time frames. I can communicate directly with the clients and participate in meetings if nesesery...
 
   Full Service:
     title: A-Z Development
