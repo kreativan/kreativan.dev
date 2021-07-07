@@ -1,6 +1,6 @@
 ---
 seo: 
-  title: Ivan Milincic - Kreativan - Front End and Processwire Web Developer
+  title: Ivan Milincic - Front End and Processwire Web Developer
   description: Web developer based in Bulgaria. With a preference for front-end development and ProcessWire CMS. I provide freelance and outsourcing services.
   image: images/hero.png
 
