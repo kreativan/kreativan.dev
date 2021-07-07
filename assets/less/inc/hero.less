@@ -6,13 +6,15 @@
 
 #hero {
 
-  @media(min-width: @breakpoint-large) {
-    min-height: 600px;
+  opacity:0;
+  &.is-loaded {
+    opacity:1;
   }
 
-  .reveal-anim:after,
-  .reveal-anim:before {
-    animation-delay: .3s;
+  h3,
+  .reveal-anim:before,
+  .reveal-anim:after {
+    animation-delay: .5s;
   }
   
   height: 100vh;
@@ -40,11 +42,11 @@
       animation-duration: .7s;
     }
     h1 {
-      animation-delay: .3s;
+      animation-delay: .8s;
       animation-duration: .5s;
     }
     p {
-      animation-delay: .6s;
+      animation-delay: 1s;
       animation-duration: .3s;
     }
   }

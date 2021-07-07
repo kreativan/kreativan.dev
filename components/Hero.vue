@@ -1,5 +1,5 @@
 <template>
-  <div id="hero" class="uk-position-relative uk-overflow-hidden">
+  <div id="hero" class="uk-position-relative uk-overflow-hidden" :class="{'is-loaded': isLoaded}">
     <div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid>
       <div class="hero-left uk-width-auto">
         <div class="uk-height-1-1 uk-flex uk-flex-middle">
@@ -35,6 +35,16 @@
 <script>
 export default {
   props: ["headline", "subtitle", "text", "img"],
+  data() {
+    return {
+      isLoaded: false
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 500);
+  }
 }
 </script>
 
