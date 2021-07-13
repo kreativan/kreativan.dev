@@ -1,7 +1,7 @@
 ---
 title: Outsourcing
 subtitle: Outsourcing services with long-term support and competitive pricing
-image: /images/outsourcing.jpg
+image: images/outsourcing.jpg
 container: small
 
 intro: Outsourcing services with long-term support and competitive pricing. With years of experience with ProcessWire and front-end development, can work in a team or build small to large scale projects from start to finish.
@@ -17,7 +17,7 @@ blocks:
 
   Collaboration:
     title: Long Term Collaboration
-    text: With preferecene for long term collaborations, i can be your reliable partner and provide long term support. I respond quickly and follow defined time frames. I can communicate directly with the clients and participate in meetings if nesesery...
+    text: With preference for long term collaborations, i can be your reliable partner and provide long term support. I respond quickly and follow defined time frames. I can communicate directly with the clients and participate in meetings if nesesery...
 
   Full Service:
     title: A-Z Development

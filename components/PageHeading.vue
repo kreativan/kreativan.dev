@@ -9,14 +9,13 @@
     </div>
 
     <template v-if="image">
-      <div class="page-image uk-container">
+      <div class="page-image uk-container uk-overflow-hidden" style="max-height: 420px;">
         <div class="uk-position-relative uk-overflow-hidden"
           uk-scrollspy="cls: reveal-anim; delay: 350"
         >
           <nuxt-picture
             :src="`${image}`"
             format="webp"
-            height="420px"
             class="uk-display-block"
             sizes="xs:380px sm:640px lg:1024px xl:1200px"
             :alt="title"
