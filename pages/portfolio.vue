@@ -1,44 +1,15 @@
 <template>
   <div id="main">
-    
-    <PageHeading
-      :title="page.title"
-      :caption="page.caption"
-      :image="page.image"
+
+    <PageHeading 
+      title="Portfolio" 
+      subtitle="My personal projects, and work ive done for my clients" 
     />
 
-    <div class="uk-container uk-margin-large">
-      <PortfolioFeatured
-        :title="featured.title"
-        :label="featured.label"
-        :text="featured.desc"
-        :image="featured.image"  
-        :link="featured.link ? featured.link : false"
-      />
-    </div>
-
-    <div class="uk-container uk-container-xlarge uk-margin-large">
-      <PortfolioSlider :items="slider" />
-    </div>
-
-    <div class="uk-container uk-margin-large">
-      <div class="uk-grid uk-child-width-1-3@m" uk-grid>
-        <template v-for="item in cards">
-          <div :key="item.slug">
-            <PortfolioCard
-              :image="item.image"
-              :title="item.title"
-              :link="item.link"
-            />
-          </div>
-        </template>
-      </div>
-    </div>
-
-    <div class="uk-container uk-margin-large">
-      <PortfolioList
-        :list="list"
-      />
+    <div class="container margin-medium">
+      <PortfolioFeatured :items="featured" />
+      <PortfolioGrid :items="grid" cls="margin-medium" />
+      <PortfolioList :items="list" cls="margin-medium" />
     </div>
 
   </div>
@@ -53,73 +24,50 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.seo.description
+          content: "Ivan Milincic Portfolio. Processwire web development portfolio.  My personal projects, github projects and work ive done for my clients"
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.seo.title
+          content: "Ivan Milincic Portfolio"
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.seo.description
+          content: "Ivan Milincic Portfolio. Processwire web development portfolio.  My personal projects, github projects and work ive done for my clients"
         }
       ],
     }
   },
-  async asyncData({ $content, params, error }) {
-
-    const portfolioPage = await $content('portfolio-page').fetch()
-
-    const featured = await $content(`portfolio`)
-    .where({ layout: 'featured' })
-    .sortBy("createdAt", 'desc')
-    .limit(1)
-    .fetch()
-    .catch((err) => {
-      error({ statusCode: 404, message: 'Page not found' })
-    })
-    
-    const slider = await $content(`portfolio`)
-    .where({ layout: 'slider'})
-    .sortBy("updatedAt", 'desc')
-    .fetch()
-    .catch((err) => {
-      // error({ statusCode: 404, message: 'Page not found' })
-      console.log(err)
-    })
-
-    const cards = await $content(`portfolio`)
-    .where({ layout: 'card'})
-    .sortBy("createdAt", 'asc')
-    .fetch()
-    .catch((err) => {
-      // error({ statusCode: 404, message: 'Page not found' })
-      console.log(err)
-    })
-
-    const list = await $content(`portfolio`)
-    .where({ layout: 'list'})
-    .sortBy("createdAt", 'asc')
-    .fetch()
-    .catch((err) => {
-      // error({ statusCode: 404, message: 'Page not found' })
-      console.log(err)
-    })
-
-    return { 
-      seo: portfolioPage.seo,
-      page: portfolioPage,
-      featured: featured[0],
-      slider: slider,
-      cards: cards,
-      list: list
+  data() {
+    return {
+      featured: {},
+      grid: {},
+      list: {}
     }
   },
+  async fetch() {
+    const featured = await this.$content('portfolio')
+    .where({ layout: 'featured' })
+    .sortBy('createdAt')
+    .fetch() 
+    this.featured = featured
+    
+    const grid = await this.$content('portfolio')
+    .where({ layout: 'grid' })
+    .sortBy('createdAt', 'desc')
+    .fetch() 
+    this.grid = grid
+
+    const list = await this.$content('portfolio')
+    .where({ layout: 'list' })
+    .sortBy('createdAt', 'desc')
+    .fetch() 
+    this.list = list
+  }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

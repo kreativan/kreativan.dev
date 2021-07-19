@@ -1,25 +1,24 @@
 <template>
   <div class="portfolio-card">
-    <nuxt-img 
-      :src='`${image}`' 
-      format="webp"
-      width="380"
-      height="250"
-      :alt="title"
-    />
-    <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-small-top uk-padding-small uk-padding-remove-vertical">
-      <div style="line-height:0;">
-        <h3 class="uk-h4 uk-margin-remove">{{ title }}</h3>
-        <span v-if="link" class="uk-text-small uk-text-muted">{{ linkText }}</span>
+    <div class="portfolio-card-image bg-muted">
+      <nuxt-img :src="image" :width="width" :height="height" :alt="title" />
+    </div>
+    <div class="portfolio-card-body">
+      <div>
+        <h3 class="font-base">{{ title }}</h3>
+        <span class="color-muted text-small">{{ linkText }}</span>
       </div>
-      <a v-if="link" 
-        :href="link" 
-        class="uk-icon-button" 
-        uk-icon="arrow-right" 
-        target="_blank" 
-        rel="nofollow noopener noreferrer"
-        :title="link">
-        <i uk-icon="link"></i>  
+      <a
+        :href="link"
+        class="btn btn-icon"
+        rel="noffolow noopener"
+        target="_blank"
+        :title="title"
+      >
+        <span>
+          <i v-html="require(`../assets/svg/link.svg?raw`)"></i>
+          <i v-html="require(`../assets/svg/arrow-right.svg?raw`)"></i>
+        </span>
       </a>
     </div>
   </div>
@@ -27,17 +26,40 @@
 
 <script>
 export default {
-  props: ["image", "title", "link"],
+  props: ["image", "title", "link", "width", "height"],
   computed: {
     linkText() {
       let clamp = '...';
-      let length = "32";
+      let length = "24";
       return this.link.length > length ? this.link.slice(0, length) + clamp : this.link;
     }
   }
-}
+};
 </script>
 
-<style>
+<style scoped>
+.portfolio-card-image img {
+  width: 100%;
+}
 
+.portfolio-card-body {
+  padding:15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-card-body .btn-icon span {
+  width: 38px;
+  height: 38px;
+}
+
+.portfolio-card h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.portfolio-card h3 + span {
+  display: block;
+  margin-top: 5px;
+}
 </style>

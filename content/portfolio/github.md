@@ -1,6 +1,6 @@
 ---
-layout: card
-title: Github Profile
-image: /images/github.jpg
-link: https://github.com/kreativan
+layout: grid
+title: GitHub Profile
+image: /portfolio/github.jpg
+link: https://github.com/kreativan/opencart-kreativan
 ---

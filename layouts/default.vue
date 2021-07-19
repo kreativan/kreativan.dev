@@ -1,9 +1,9 @@
 <template>
-  <div id="layout-default">
-    <Header cls="header-default" />
+  <div id="layout-home">
+    <Header @toggle-menu="toggleMenu" />
     <Nuxt />
     <Footer />
-    <Menu />
+    <Menu :isOpen="isMenuOpen" @toggle-menu="toggleMenu" />
   </div>
 </template>
 
@@ -37,25 +37,31 @@ export default {
       ]
     }
   },
-  watch: {
-    $route () {
-      const element = document.querySelector("#offcanvas-menu");
-      this.$uikit.offcanvas(element).hide()
-      const navEl = document.querySelectorAll("#offcanvas-menu .uk-nav li.uk-parent.uk-open");
-      if(navEl && navEl.length > 0) {
-        setTimeout(() => {
-          navEl.forEach(function(e) { 
-            e.classList.remove("uk-open")
-            let subnav = e.querySelector(".uk-nav-sub")
-            if(subnav) subnav.setAttribute("hidden", "")
-          })
-        }, 300);
-      }
+  data() {
+    return {
+      isMenuOpen: false
     }
   },
+  watch: {
+    $route() {
+      const body = document.querySelector("body");
+      body.classList.remove("noscroll");
+      this.isMenuOpen = false;
+      const submenu = document.querySelector("#menu .parent > span");
+      submenu.classList.remove("open");
+    },
+  },
+  methods: {
+    toggleMenu() {
+      const body = document.querySelector("body");
+      if(this.isMenuOpen === true) {
+        this.isMenuOpen = false;
+        body.classList.remove("noscroll");
+      } else {
+        body.classList.add("noscroll");
+        this.isMenuOpen = true;
+      }
+    }
+  }
 }
 </script>
-
-<style>
-
-</style>

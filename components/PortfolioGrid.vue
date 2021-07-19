@@ -1,13 +1,13 @@
 <template>
-  <div class="portfolio-featured" :class="cls">
+  <div class="portfolio-grid" :class="cls">
     <template v-for="item in items">
       <div :key="item.slug">
         <PortfolioCard 
           :image="item.image"
           :title="item.title"
-          :link="item.link ? item.link : ''"
-          width="600"
-          height="292"
+          :link="item.link"
+          width="380"
+          height="240"
         />
       </div>
     </template>
@@ -17,18 +17,24 @@
 <script>
 export default {
   props:["items", "cls"]
-};
+}
 </script>
 
 <style scoped>
-.portfolio-featured {
+.portfolio-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: var(--gutter);
   grid-row-gap: var(--gutter);
 }
 @media(max-width: 960px) {
-  .portfolio-featured {
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 640px) {
+  .portfolio-grid {
     grid-template-columns: 1fr;
   }
 }

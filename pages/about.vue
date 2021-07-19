@@ -1,42 +1,22 @@
 <template>
   <div id="main">
 
-    <PageHeading
-      :title="page.title"
-      :caption="page.caption"
-      :image="page.image"
+    <PageHeading 
+      :image="page.image" 
+      :title="page.title" 
+      :subtitle="page.subtitle" 
     />
 
-    
-    <div class="uk-container uk-section" uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 400">
-      <template v-for="(item, key) in page.blocks">
-        <div :key="key" class="uk-margin-medium">
-          <TextBlock
-            :label="key"
-            :title="item.title"
-            :text="item.text"
-          />
+    <div class="container margin-medium">
+      <template v-for="(item, key) in textBlocks">
+        <div :key="key" class="text-block">
+          <h4>{{ key }}</h4>
+          <div>
+            <h2>{{ item.title }}</h2>
+            <p v-html="item.text"></p>
+          </div>
         </div>
       </template>
-
-      <div
-        class="uk-grid uk-grid-large"
-        uk-grid
-        uk-scrollspy="cls: uk-animation-slide-bottom-medium; delay: 500"
-      >
-        <div class="uk-width-1-3@m">
-          <h5 class="uk-text-uppercase uk-text-muted uk-margin-small-bottom">
-            Contact
-          </h5>
-        </div>
-        <div class="uk-width-expand@m">
-          <h2 class="uk-h3 uk-text-bold">Let's get in touch</h2>
-          <ContactInfo />
-        </div>
-      </div>
-
-      <nuxt-content :document="page" />
-
     </div>
 
   </div>
@@ -46,27 +26,22 @@
 export default {
   head() {
     return {
-      title: this.seo.title,
+      title: "About Me | Ivan Milincic Web Developer",
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.seo.description
+          content: "Serbian web developer working and living in lovely Bulgaria. Providinf outsorcing and freelance web development services."
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.seo.title
+          content: "About Me | Ivan Milincic Web Developer"
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.seo.description
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.seo.image
+          content: "Serbian web developer working and living in lovely Bulgaria. Providinf outsorcing and freelance web development services."
         }
       ],
     }
@@ -74,23 +49,17 @@ export default {
   data() {
     return {
       page: {},
-      seo: {}
+      textBlocks: {}
     }
   },
   async fetch() {
     const page = await this.$content('about').fetch()
     this.page = page
-    this.seo = page.seo
+    this.textBlocks = page.blocks
   },
 }
 </script>
 
-<style scoped>
-h5 {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-}
-.uk-grid h2 {
-  margin-top: -10px !important;
-}
+<style>
+
 </style>

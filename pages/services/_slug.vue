@@ -3,35 +3,13 @@
 
     <PageHeading 
       :title="page.title"
-      :caption="page.subtitle"
+      :subtitle="page.subtitle"
       :image="page.image"
     />
 
-    <div class="uk-section">
-      <div class="uk-container" 
-      :class="page.container ? `uk-container-${page.container}` : ''">
-
-        <p 
-          v-if="page.intro" 
-          class="uk-h4 tm-font-deco uk-width-auto" 
-          v-html="page.intro"
-        >
-        </p>
-
-        <template v-for="(item, key) in page.blocks">
-          <div :key="key" class="uk-margin-medium">
-            <TextBlock
-              :label="key"
-              :title="item.title"
-              :text="item.text"
-              animation="true"
-            />
-          </div>
-        </template>
-
-        <nuxt-content :document="page" />
-
-      </div>
+    <div class="container-medium margin-medium">
+      <p class="text-intro">{{ page.intro }}</p>
+      <nuxt-content :document="page" />
     </div>
 
   </div>
@@ -41,7 +19,7 @@
 export default {
   head() {
     return {
-      title: this.page.title  + " | " + this.page.subtitle,
+      title: this.page.title + " | Web development services",
       meta: [
         {
           hid: 'description',
@@ -51,17 +29,12 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.page.title
+          content: this.page.intro
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.page.description
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.page.image
+          content: this.page.intro
         }
       ],
     }

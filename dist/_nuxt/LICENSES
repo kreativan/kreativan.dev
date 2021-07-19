@@ -1,5 +1,5 @@
 /*!
-  * vue-router v3.5.1
+  * vue-router v3.5.2
   * (c) 2021 Evan You
   * @license MIT
   */
@@ -9,16 +9,6 @@
  * (c) 2014-2021 Evan You
  * Released under the MIT License.
  */
-
-
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <http://feross.org>
- * @license  MIT
- */
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 
 /*!
@@ -33,4 +23,12 @@
  * Released under the MIT License.
  */
 
-/*! UIkit 3.6.22 | https://www.getuikit.com | (c) 2014 - 2021 YOOtheme | MIT License */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */

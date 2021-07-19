@@ -1,6 +1,6 @@
 ---
-layout: card
+layout: grid
 title: Envato
-image: /images/envato.jpg
+image: /portfolio/envato.jpg
 link: https://codecanyon.net/user/kreativan/portfolio
 ---

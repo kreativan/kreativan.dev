@@ -10,16 +10,11 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "core-js": "^3.9.1",
-    "nuxt": "^2.15.3",
-    "uikit": "^3.6.21"
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.4.14",
-    "@nuxtjs/svg": "^0.1.12",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "less": "^3.13.1",
-    "less-loader": "^5.0.0"
+    "@nuxt/image": "^0.5.0",
+    "@nuxtjs/svg": "^0.1.12"
   }
 }

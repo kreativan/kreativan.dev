@@ -1,0 +1,103 @@
+/*  Layout
+=========================================================== */
+.container-medium,
+.container-small,
+.container {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 var(--gutter);
+}
+
+.container-small {
+  max-width: 700px;
+}
+
+.container-medium {
+  max-width: 900px;
+}
+
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.padding {
+  padding: var(--gutter);
+}
+
+.margin {
+  margin: var(--margin) 0;
+}
+
+.margin-medium {
+  margin: var(--margin-medium) 0;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+/*  Backgrounds
+=========================================================== */
+.bg-muted {
+  background: var(--bg-muted);
+}
+
+.bg-black {
+  background: var(--bg-black);
+}
+
+  .bg-black * {
+    color: white;
+  }
+
+  .bg-black p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .bg-black a:hover {
+    color: white;
+  }
+
+  .bg-black svg {
+    stroke: white !important;
+  }
+  
+/*  Color
+=========================================================== */
+.color-muted {
+  color: var(--color-muted);
+}
+
+/*  Text
+=========================================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: 0.85rem;
+}
+
+.text-large {
+  font-size:1.1rem;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-intro {
+  font-family: var(--font-base);
+  font-size:1.2rem;
+}
+
+.font-base {
+  font-family: var(--font-base);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}

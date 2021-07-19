@@ -1,28 +1,31 @@
 <template>
-  <div id="hero-bar" class="uk-flex uk-flex-between uk-flex-column uk-text-center uk-visible@l">
-    <a href="#offcanvas-menu" uk-toggle class="uk-link-reset">
-      <div class="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </a>
-    <div class="social-links">
-      <a class="uk-link-reset" href="https://www.linkedin.com/in/kreativan-dev/" target="_blank" rel="nofollow noreferrer noopener" title="Ivan Milincic LinkedIn">
-        LinkedIn
-      </a>
-      <a class="uk-link-reset" href="https://twitter.com/lokomotivan/" target="_blank" rel="nofollow noreferrer noopener" title="Ivan Milincic Twitter">
-        Twitter
-      </a>
-      <a class="uk-link-reset" href="https://github.com/kreativan/" target="_blank" rel="nofollow noreferrer noopener" title="Ivan Milincic Github">
-        GitHub
-      </a>
-    </div>
-    <div>
-      <a href="#first" class="uk-text-muted uk-display-block uk-margin-bottom" uk-scroll title="Web Desgin & Development">
-        <span uk-icon="icon: arrow-down; ratio: 1.7"></span>
-      </a>
-    </div>
+  <div class="hero-bar">
+      <nav>
+        <a
+          href="https://www.linkedin.com/in/kreativan-dev/"
+          target="_blank"
+          rel="nofollow, noopener"
+          title="Ivan Milincic LinkedIn"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://twitter.com/lokomotivan"
+          target="_blank"
+          rel="nofollow, noopener"
+          title="Ivan Milincic Twitter"
+        >
+          Twitter
+        </a>
+        <a
+          href="https://github.com/kreativan"
+          target="_blank"
+          rel="nofollow, noopener"
+          title="Ivan Milincic GitHub"
+        >
+          GitHub
+        </a>
+      </nav>
   </div>
 </template>
 
@@ -32,6 +35,53 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.hero-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 10px;
+  position:absolute;
+  width:110px;
+  height: 100vh;
+  top:0;
+  bottom:0;
+  right:0;
+  background: white;
+  z-index:997;
 
+  animation-name: slide-right;
+  animation-fill-mode: both;
+  animation-duration: .3s;
+  animation-delay: 1.4s;
+
+}
+
+.hero-bar > nav {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+.hero-bar a {
+  margin-right:15px;
+  text-decoration: none;
+  color: var(--color-muted);
+  font-size:0.9rem;
+  letter-spacing: 0.5px;
+}
+.hero-bar a:hover {
+  color:var(--color-heading);
+}
+
+@keyframes slide-right {
+  0% {transform: translateX(100%);opacity:0;}
+  100% {transform: translateX(0);opacity:1;}
+}
+
+@media(max-width: 960px) {
+  .hero-bar {
+    display:none;
+  }
+}
 </style>
