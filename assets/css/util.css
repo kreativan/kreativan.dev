@@ -94,6 +94,12 @@
   font-size:1.2rem;
 }
 
+@media(max-width: 480px) {
+  .text-intro {
+    font-size: 1.07rem;
+  }
+}
+
 .font-base {
   font-family: var(--font-base);
 }

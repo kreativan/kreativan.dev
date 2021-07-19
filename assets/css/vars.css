@@ -35,5 +35,8 @@
     --gutter: 20px;
     --margin-medium: 35px;
     --section-padding: 50px;
+    --h1: 2rem;
+    --h2: 1.4rem;
+    --h3: 1.2rem;
   }
 }
