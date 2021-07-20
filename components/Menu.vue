@@ -16,7 +16,7 @@
           </span>
           <ul>
             <li v-for="item in services" :key="item.slug">
-              <nuxt-link class="nav__link" :to="item.path" :title="item.title">
+              <nuxt-link class="nav__link" :to="`${item.path}/`" :title="item.title">
                 {{ item.title }}
               </nuxt-link>
             </li>
@@ -54,7 +54,6 @@ export default {
     },
     toggleNav() {
       event.target.classList.toggle("open")
-      // event.target.nextElementSibling.classList.toggle("open")
     }
   },
 }

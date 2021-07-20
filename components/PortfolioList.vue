@@ -2,9 +2,11 @@
   <div>
     <table :class="cls">
       <thead>
-        <th>Project</th>
-        <th>About</th>
-        <th>Link</th>
+        <tr>
+          <th>Project</th>
+          <th>About</th>
+          <th>Link</th>
+        </tr>
       </thead>
       <tbody>
         <tr v-for="item in items" :key="item.slug">
