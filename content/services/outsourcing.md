@@ -1,4 +1,5 @@
 ---
+updatedAt: 2021-07-19
 feed: true
 read_more: true
 image: outsourcing.jpg

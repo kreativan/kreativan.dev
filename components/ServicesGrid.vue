@@ -31,7 +31,7 @@ export default {
   async fetch() {
     const services = await this.$content('services')
     .where({ feed: true })
-    .sortBy('createdAt')
+    .sortBy('updatedAt')
     .fetch()
     this.services = services
   }
