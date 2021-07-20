@@ -12,8 +12,7 @@
           {{ item.summary }}
           <template v-if="item.read_more">
             <nuxt-link :to="item.path" :title="item.title">
-              More
-              <span class="svg" v-html="require(`../assets/svg/arrow-right.svg?raw`)"></span>
+              Raad More
             </nuxt-link>
           </template>
         </p>

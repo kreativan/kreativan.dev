@@ -10,7 +10,11 @@
       </div>
     </div>
 
-    <SplitSection />
+    <SplitSection
+      :title="custom_web.title"
+      :text="custom_web.text"
+      :link="custom_web.link ? custom_web.link : ''"
+    />
 
     <div class="section bg-black">
       <div class="container">
@@ -69,6 +73,7 @@ export default {
       },
       hero: {},
       intro: {},
+      custom_web: {},
       contact: {}
     }
   },
@@ -76,6 +81,7 @@ export default {
     const page = await this.$content('home').fetch()
     this.hero = page.hero
     this.intro = page.intro
+    this.custom_web = page.custom_websites
     this.contact = page.contact
   },
   computed: {

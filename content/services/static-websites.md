@@ -4,7 +4,7 @@ read_more: true
 image: custom-websites.jpg
 title: Static Websites
 subtitle: JAMStack baby! JavaScript, API, Markup...
-summary: Blazing fast JAMStack static websites with nuxt.js, github and netlify... Git based content and APIs, with low maintaince costs. 
+summary: Blazing fast JAMStack static websites with nuxt.js, github and netlify... Git based content and APIs. 
 intro: Blazing fast static websites built with nuxt.js and deployed on github and netlify... Git based content and APIs, with low maintaince costs
 ---
 

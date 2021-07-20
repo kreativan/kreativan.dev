@@ -6,7 +6,7 @@ intro: I'm a web developer building custom websites at any scale. I prefer front
 
 ## Why me?
 - I'm web developer with 8+ years of expiriance.
-- Hight expertise in front-end, design implementation and website development.
+- High expertise in front-end, design implementation and website development.
 - I have a lot of expiriance working with ProcessWire, building content structures, front-end, modules, custom admin pages etc..
 - I can work solo or in a team.
 - I can do whole projects, back and front-end, complete solutions from start-to-finish.

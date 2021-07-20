@@ -110,6 +110,12 @@ b {
   font-size: 2.2rem;
 }
 
+@media(max-width: 1280px) {
+  .ss-content p {
+    max-width:420px;
+  }
+}
+
 @media(max-width: 768px) {
   .split-section {
     grid-template-columns: 1fr;

@@ -9,6 +9,11 @@ intro:
   title: Web Design & Development
   text: Freelance and outsourcing web development services. <br> Solutions based on project requirements with the seamless implementation of the user interface and functionality.
 
+custom_websites:
+  title: Custom Websites
+  text: Websites with custom design and features, SEO friendly, fast and optimized. <br /> From broshure type of websites to advanced content managament needs, directories, webshops and apps... <br /> Long-term support and collaboration for all project requirements. Deployment, hosting, On-Page SEO, integrations, updates, customizations... 
+  link: /services/custom-websites/
+
 contact: 
   title: Let's Work Together
   text: Have an exciting projects and need some help? <br /> You can contact me by email, drop me a message on LinkedIn, or find me on Twitter.
