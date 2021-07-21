@@ -16,13 +16,24 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com'},
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: ''},
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Playfair+Display:wght@400&display=swap',
-      }
     ]
+  },
+
+  googleFonts: {
+    display: 'swap',
+    prefetch: true,
+    reconnect: true,
+    preload: true,
+    useStylesheet: false,
+    download: true,
+    families: {
+      Barlow: {
+        wght: [400, 500],
+      },
+      'Playfair+Display': {
+        wght: [400],
+      }
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,6 +56,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxt/image',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
