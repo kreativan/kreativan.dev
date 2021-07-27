@@ -13,7 +13,7 @@ intro: I am a web developer focused on the ProcessWire CMS. I develop websites w
 Open source CMS and web application framework. Super fast and rock solid platform, without endless updates and tons of plugins to worry about.
 
 ## Custom Modules
-Cusotm modules development for all kind of needs, based on project requirements, but also more universal ones that could be reused on multiple projects.
+Custom modules development for all kind of needs, based on project requirements, but also more universal ones that could be reused on multiple projects.
 
 ## Custom Admin UI
 Development of custom admin pages and interface. You can manage all your content from the page tree, but in some cases with more complicated content structure, custom admin pages makes content managament more easy and productive.
