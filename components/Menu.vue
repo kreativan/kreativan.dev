@@ -2,6 +2,9 @@
   <div id="menu-wrapper" :class="{'is-open': isOpen}">
     <div id="menu-overlay" @click="toggleMenu()"></div>
     <div id="menu" :class="{'is-open': isOpen}">
+      <a class="close-menu" href="#" @click="toggleMenu()">
+        <i v-html="require(`../assets/svg/close.svg?raw`)"></i>
+      </a>
       <ul class="nav">
         <li>
           <nuxt-link class="nav__link" to="/" title="Home">Home</nuxt-link>
@@ -147,6 +150,14 @@ export default {
 #menu .nav .open i {
   transform: rotate(90deg);
 } 
+
+#menu .close-menu {
+  display: block;
+  position:absolute;
+  padding: 15px;
+  top: 0;
+  right: 0;
+}
 
 @media(max-width: 768px) {
   #menu {

@@ -55,7 +55,7 @@ export default {
   animation-name: slide-right;
   animation-fill-mode: both;
   animation-duration: .3s;
-  animation-delay: 1.4s;
+  animation-delay: 1.8s;
 
 }
 

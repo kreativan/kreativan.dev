@@ -82,7 +82,7 @@ export default {
   animation-name: menu-button-anim;
   animation-fill-mode: both;
   animation-duration: .3s;
-  animation-delay: 1.5s;
+  animation-delay: 1.9s;
 }
 
 @keyframes menu-button-anim {
