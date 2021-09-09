@@ -17,5 +17,5 @@ custom_websites:
 contact: 
   title: Let's Work Together
   text: Have an exciting projects and need some help? <br /> You can contact me by email, drop me a message on LinkedIn, or find me on Twitter.
-  email: kreativan.dev@gmail.com
+  email: hello@kreativan.dev
 ---
