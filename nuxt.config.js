@@ -19,6 +19,10 @@ export default {
     ]
   },
 
+  googleAnalytics: {
+    id: 'G-GEJCRMD4XH'
+  },
+
   googleFonts: {
     display: 'swap',
     prefetch: true,
@@ -57,6 +61,7 @@ export default {
   buildModules: [
     '@nuxt/image',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
