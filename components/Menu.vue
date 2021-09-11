@@ -7,29 +7,22 @@
       </a>
       <ul class="nav">
         <li>
-          <nuxt-link class="nav__link" to="/" title="Home">Home</nuxt-link>
+          <nuxt-link class="nav__link" to="/" title="Home">
+            Home
+          </nuxt-link>
         </li>
         <li>
-          <nuxt-link class="nav__link" to="/about/" title="About">About</nuxt-link>
-        </li>
-        <li class="parent">
-          <span @click="toggleNav()">
-            Services
-            <i v-html="require(`../assets/svg/chevron-right.svg?raw`)"></i>
-          </span>
-          <ul>
-            <li v-for="item in services" :key="item.slug">
-              <nuxt-link class="nav__link" :to="`${item.path}/`" :title="item.title">
-                {{ item.title }}
-              </nuxt-link>
-            </li>
-          </ul>
+          <nuxt-link class="nav__link" to="/about/" title="About">
+            About
+          </nuxt-link>
         </li>
         <li>
           <nuxt-link class="nav__link" to="/portfolio/" title="Portfolio">Portfolio</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="nav__link" to="/hire-me/" title="Hire Me">Hire Me</nuxt-link>
+          <nuxt-link class="nav__link" to="/hire-me/" title="Hire Me">
+            Hire Me
+          </nuxt-link>
         </li>
       </ul>
     </div>
@@ -54,9 +47,6 @@ export default {
   methods: {
     toggleMenu() {
       this.$emit('toggle-menu');
-    },
-    toggleNav() {
-      event.target.classList.toggle("open")
     }
   },
 }

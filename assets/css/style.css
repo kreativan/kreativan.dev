@@ -13,6 +13,13 @@ b {
   font-weight: 500;
 }
 
+.basic-list {
+  list-style: inside;
+}
+.basic-list li + li {
+  margin-top: 10px;
+}
+
 /* btn
 =========================================================== */
 
@@ -108,6 +115,11 @@ b {
 
 .ss-content h2 {
   font-size: 2.2rem;
+  margin:0;
+}
+
+.ss-content h2 + h3 {
+  margin-top: 10px;
 }
 
 @media(max-width: 1280px) {
@@ -122,9 +134,13 @@ b {
   }
   .ss-content {
     padding: var(--gutter);
+    order: 2;
   }
   .ss-media img {
     position:relative;
+  }
+  .ss-media {
+    order: 1;
   }
 }
 

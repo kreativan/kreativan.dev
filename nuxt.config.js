@@ -69,7 +69,14 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     "@nuxtjs/svg",
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: "https://kreativan.dev",
+    gzip: true,
+    trailingSlash: true
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

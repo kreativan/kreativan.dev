@@ -47,8 +47,6 @@ export default {
       const body = document.querySelector("body");
       body.classList.remove("noscroll");
       this.isMenuOpen = false;
-      const submenu = document.querySelector("#menu .parent > span");
-      submenu.classList.remove("open");
     },
   },
   methods: {

@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-black">
     <p class="text-small text-center">
-      Made in Bulgaria & Serbia. Built with nuxt.js, hosted on GitHub and Netlify
+      Made in Bulgaria & Serbia. Built with nuxt.js hosted on GitHub
     </p>
   </footer>
 </template>

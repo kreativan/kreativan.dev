@@ -10,19 +10,28 @@
       </div>
     </div>
 
-    <SplitSection
+    <CustomWebsites
       :title="custom_web.title"
       :text="custom_web.text"
       :link="custom_web.link ? custom_web.link : ''"
+      :list="custom_web.list"
     />
 
     <div class="section bg-black">
       <div class="container">
-        <ServicesGrid />
+        <ServicesHome :services="services" />
       </div>
     </div>
 
-    <div class="section-contact section text-center">
+    <SplitSection
+      pos="right"
+      :image="`${outsourcing.image}`"
+      :title="outsourcing.title"
+      :subtitle="outsourcing.subtitle"
+      :text="outsourcing.text"
+    />
+
+    <div class="section-contact section bg-muted text-center">
       <div class="container-small">
         <h2>{{ contact.title }}</h2>
         <p class="text-large" v-html="contact.text"></p>
@@ -40,7 +49,7 @@
 export default {
   head() {
     return {
-      title: "Ivan Milincic | Processwire Web Developer | Web Developer",
+      title: this.seo.title,
       meta: [
         {
           hid: 'description',
@@ -68,12 +77,14 @@ export default {
   data() {
     return {
       seo: {
-        title: "Ivan Milincic | Processwire Web Developer | Web Developer",
+        title: "Freelance Web Developer | Processwire Developer | Web Developer Bulgaria-Serbia",
         description: "Web developer based in Bulgaria. With a preference for front-end development and ProcessWire CMS. I provide freelance and outsourcing services."
       },
       hero: {},
       intro: {},
       custom_web: {},
+      services: {},
+      outsourcing: {},
       contact: {}
     }
   },
@@ -83,6 +94,8 @@ export default {
     this.intro = page.intro
     this.custom_web = page.custom_websites
     this.contact = page.contact
+    this.services = page.services
+    this.outsourcing = page.outsourcing
   },
   computed: {
     mailTo() {
