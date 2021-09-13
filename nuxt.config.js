@@ -20,7 +20,7 @@ export default {
   },
 
   googleAnalytics: {
-    id: 'G-GEJCRMD4XH'
+    id: 'UA-192959613-2'
   },
 
   googleFonts: {
