@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio-card">
     <div class="portfolio-card-image bg-muted">
-      <nuxt-img :src="image" :width="width" :height="height" :alt="title" />
+      <nuxt-picture :src="image" :width="width" :height="height" :alt="title" />
     </div>
     <div class="portfolio-card-body">
       <div>

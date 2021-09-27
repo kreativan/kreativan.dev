@@ -1,7 +1,7 @@
 <template>
   <div class="split-section" v-view.once>
     <div class="ss-media image-animation">
-      <nuxt-img src="/custom-websites.jpg" format="webp" width="640" height="480" />
+      <nuxt-picture src="/custom-websites.jpg" format="webp" width="640" height="480" />
     </div>
     <div class="ss-content">
       <h2>{{ title }}</h2>

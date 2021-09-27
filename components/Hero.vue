@@ -10,7 +10,7 @@
     </div>
 
     <div class="hero-media reveal-anim anim-long">
-      <nuxt-img 
+      <nuxt-picture 
         :src="`${hero.image}`" 
         format="webp" 
         width="700" 

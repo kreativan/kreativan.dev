@@ -2,7 +2,7 @@
   <div class="split-section" v-view.once>
     
     <div v-if="pos == 'left'" class="ss-media image-animation">
-      <nuxt-img :src="`${image}`"  format="webp" width="640" height="480" />
+      <nuxt-picture :src="`${image}`"  format="webp" width="640" height="480" />
     </div>
 
     <div class="ss-content">
@@ -12,7 +12,7 @@
     </div>
 
     <div v-if="pos == 'right'" class="ss-media image-animation">
-      <nuxt-img :src="image" format="webp" width="800" height="600" />
+      <nuxt-picture :src="image" format="webp" width="800" height="600" />
     </div>
 
   </div>

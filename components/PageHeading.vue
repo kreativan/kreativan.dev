@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
     <h3>{{ subtitle }}</h3>
     <div v-if="image" class="page-heading-image reveal-anim anim-long margin-medium">
-      <nuxt-img 
+      <nuxt-picture 
         :src="`${image}`" 
         width="1200"
         height="420"
