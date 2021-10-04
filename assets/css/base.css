@@ -4,8 +4,7 @@ html {
 }
 
 body.noscroll{
-  overflow-y: hidden;
-  touch-action: pan-y pinch-zoom;
+  overflow: hidden !important;
 }
 
 p {

@@ -78,10 +78,10 @@ p {
   position:relative;
   overflow: hidden;
 }
-.hero-media img {
+.hero-media picture {
+  display: block;
   width:100%;
   height:100%;
-  object-fit: cover;
 }
 
 @keyframes slide-bottom {
