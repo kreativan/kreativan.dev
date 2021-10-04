@@ -67,12 +67,11 @@ export default {
   bottom:0;
   width: 280px;
   transform: translateX(100%);
-  transition: transform .3s;
+  transition: transform .5s;
   padding: var(--gutter);
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
 }
 #menu.is-open {
-  transition: transform .4s;
   transform: translateX(0);
 }
 
