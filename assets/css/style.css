@@ -150,6 +150,16 @@ b {
   }
 }
 
+@media(min-width: 1400px) {
+  .ss-content {
+    padding: 80px;
+    max-width: 520px;
+  }
+  .split-section-right .ss-content {
+    margin-left: auto;
+  }
+}
+
 /*  Text Block
 =========================================================== */
 .text-block > h4 {

@@ -10,7 +10,7 @@ intro:
   text: Freelance and outsourcing web development services. <br> Solutions based on project requirements with the seamless implementation of the user interface and functionality.
 
 custom_websites:
-  title: Need a Website?
+  title: Custom Websites
   text: Websites with custom design and features, SEO friendly, fast and optimized. From broshure type of websites to advanced content managament needs, directories, webshops….
   list: 
     1: Hosting & Deployment

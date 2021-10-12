@@ -1,5 +1,5 @@
 <template>
-  <div class="split-section" v-view.once>
+  <div :class="'split-section split-section-' + pos" v-view.once>
     
     <div v-if="pos == 'left'" class="ss-media image-animation">
       <nuxt-picture :src="`${image}`"  format="webp" width="640" height="480" />
