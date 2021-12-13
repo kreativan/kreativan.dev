@@ -37,5 +37,5 @@ outsourcing:
 contact: 
   title: Let's get in touch
   text: Do you need a website, or some help with your project? <br /> You can send me an email, or contact me on social networks.
-  email: hello@kreativan.dev
+  email: kreativan.dev@gmail.com
 ---

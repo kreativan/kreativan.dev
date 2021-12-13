@@ -17,6 +17,6 @@ intro: I'm a web developer building custom websites at any scale. I prefer front
 ## How to get in touch?
 You can write me on my email, or find me on social networks. Drop me a message and ill get back to you asap.
 
-- hello@kreativan.dev
+- kreativan.dev@gmail.com
 - https://linkedin.com/in/kreativan-dev/
 - https://twitter.com/lokomotivan
