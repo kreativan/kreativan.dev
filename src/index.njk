@@ -139,7 +139,7 @@ services:
       <div class="hover:scale-105 hover:shadow-2xl duration-300 shadow-xl">
         <div class="overflow-hidden ">
           {% if item.image %}
-            <a class="block" href="{{ item.link }}" target="_blank" title="{{ item.link }}">
+            <a class="block" href="{{ item.link }}" target="_blank" rel="nofollow" title="{{ item.link }}">
             {% image {src: item.image, alt: item.title, format: "jpg", size: 680, cls: "w-full"} %}
             </a>
           {% endif %}
