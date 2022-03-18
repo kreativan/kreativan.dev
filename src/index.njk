@@ -1,0 +1,156 @@
+---
+layout: base.njk
+bg: '/assets/images/code-bg.jpg'
+
+seo:
+  title: Ivan Milincic - Freelance Web Developer
+  description: Web developer based in Bulgaria. I build custom websites at any scale, based on a project requirements and client's vision. Using traditional and headless CMS systems, and modern static site generators to create fast and reliable solutions.
+
+eleventyNavigation:
+  key: home
+  title: Home
+  order: 0
+
+recent_projects: My Recent <em>Projects</em>
+projects:
+  - title: Code étoile
+    link: https://codetoile.com
+    image: ./src/assets/portfolio/code-etoile.png
+  - title: Valdex
+    link: https://valdex.bg
+    image: ./src/assets/portfolio/valdex.jpg
+
+hero:
+  title: Freelance <em>Web Developer</em>
+  text: I build custom websites at any scale, based on a project requirements and client's vision. Using traditional and headless CMS systems, and modern static site generators to create fast and reliable solutions.
+
+info:
+  - label: Location
+    value: Sofia, Bulgaria
+  - label: Email
+    value: hello@kreativan.dev
+  - label: Tech
+    value: HTML / CSS / JS / PHP
+
+pro:
+  title: Professional 
+  emphasis: Web Development
+  text: Web design and development is my full time job. Not a side work or a hobby! I'm completely dedicated to my clients and projects, offering professional service and long term support. I can handle all technical aspects of your website, from design and development to hosting, maintenance and content management… 
+
+what:
+  title: <em>What</em> I Can Do For You? 
+  text: Websites with custom design and features, SEO friendly, fast and optimized. From broshure type of websites to advanced content managament needs and webshops….
+
+outsourcing:
+  title: <em>Outsourcing</em> Services
+  text: Freelance web development and outsourcing services with long-term support and <b>competitive pricing</b>. There is no employment birocracy and additional costs for you. We just focus on work and to get things done!
+
+services:
+  - title: CMS Development
+    text: "Working with any type of content managament system, traditional or headless, especially php based: wordpress, processwire, statamic, craft..."
+  - title: ProcessWire CMS/CMF
+    text: Years of expiriance with ProcessWire. Front-end, modules, integrations, custom features... My CMS of choise for most projects.
+  - title: Static Websites
+    text: "Super fast websites with modern static sites generators: 11ty, astro, nuxt... Deployed on GitHub, CloudFlare and Netlify."
+  - title: eCommerce
+    text: Webshop and e-commerce development, based on open-source and proprietary platforms. SnipCart, WooCommerce, OpenCart...
+  - title: Design Implementation
+    text: I can code your designs or wireframes and turn them into fully functional websites. As static or dynamic pages, with or without CMS.
+  - title: Support
+    text: Unlimited support, with direct contact and collaboration. Continued development and customizations based on the client needs.
+
+
+---
+
+<!-- hero -->
+<section class="pt-0 pb-14 lg:py-32 md:py-24 relative">
+
+  <div class="absolute top-0 z-0 w-full h-full invisible lg:visible" style="background: url({{ bg }});opacity:0.2;top:-20px"></div>
+
+  <div class="container relative z-1 bg-gradient-to-r from-transparent via-white to-transparent">
+
+    <h1 class="text-center">
+      <span class="block text-5xl md:text-7xl lg:text-8xl font-light">{{ meta.author }}</span>
+      <span class="block text-lg md:text-2xl lg:text-3xl mt-5">
+        <span class="uppercase">{{ hero.title | safe }}</span>
+      </span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto md:text-xl my-5 md:my-12 text-center text-neutral-700">
+      {{ hero.text }}
+    </p>
+
+    <ul class="lg:flex justify-center divide-y lg:divide-y-0 lg:divide-x divide-gray-200 text-center lg:text-left">
+      {% for item in info %}
+        <li class="py-3 lg:px-10 lg:py-0">
+          <h3 class="text-lg md:text-xl font-semibold">{{ item.label }}</h3>
+          <span class="text-sm md:text-base">{{ item.value }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>
+
+<!-- pro webd ev -->
+<div class="container py-10 md:py-16 lg:py-20 bg-neutral-50 mx-auto">
+  <h2 class="text-2xl md:text-3xl lg:text-4xl uppercase text-center ">
+    {{ pro.title }} 
+    <em class="font-bold uppercase">{{ pro.emphasis }}</em>
+  </h2>
+  <p class="max-w-2xl mt-7  mx-auto text-center md:text-lg text-neutral-700">
+    {{ pro.text | safe }}
+  </p>
+</div>
+
+<!-- what -->
+<div class="container my-14 md:my-20 lg:my-28">
+  <h2 class="text-2xl md:text-4xl text-center uppercase">
+    {{ what.title | safe }}
+  </h2>
+  <p class="max-w-2xl mx-auto mt-5 mb-10 md:text-lg">{{ what.text }}</p>
+  <div class="grid gap-x-10 gap-y-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {% for service in services %}
+    <div>
+      <h3 class="text-lg mb-2 font-semibold">{{ service.title }}<h3>
+      <p class="text-base">{{ service.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- outsourcing -->
+<div class="container bg-neutral-50 mx-auto py-10 md:py-16 lg:py-20 my-14 md:my-20 lg:my-28">
+  <h2 class="text-2xl md:text-4xl text-center uppercase">
+    {{ outsourcing.title | safe }}
+  </h2>
+  <p class="max-w-2xl mt-7  mx-auto text-center md:text-lg text-neutral-700">
+    {{ outsourcing.text | safe }}
+  </p>
+</div>
+
+
+<div class="container my-16 md:my-20 lg:my-28 mx-auto">
+  <h2 class="text-2xl md:text-4xl text-center uppercase">
+    {{ recent_projects | safe }}
+  </h2>
+  <div class="grid gap-7 grid-cols-1 lg:grid-cols-2 mt-5 md:mt-10">
+    {% for item in projects %}
+      <div class="hover:scale-105 hover:shadow-2xl duration-300 shadow-xl">
+        <div class="overflow-hidden ">
+          {% if item.image %}
+            <a class="block" href="{{ item.link }}" target="_blank" title="{{ item.link }}">
+            {% image {src: item.image, alt: item.title, format: "jpg", size: 680, cls: "w-full"} %}
+            </a>
+          {% endif %}
+        </div>
+        <div class="bg-neutral-900 py-2 px-4 text-neutral-200">
+          <h3 class="text-sm font-light flex items-center justify-between">
+            <em>{{ item.link | replace("https://", "") }}</em>
+            <span>{{ item.title }}</span>
+          </h3>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

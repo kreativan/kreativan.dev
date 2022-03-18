@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- meta -->
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}">
+  <link rel="canonical" href="{{ meta.website }}{{ page.url }}">
+
+  <!-- open graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ meta.website }}{{ page.url }}">
+  <meta property="og:title" content="{{ seo.title }}">
+  <meta property="og:description" content="{{ seo.description }}">
+  {% if seo.image %}
+  <meta property="og:image" content="{{ seo.image }}">
+  {% endif %}
+
+  <!-- twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ meta.website }}{{ page.url }}">
+  <meta property="twitter:title" content="{{ seo.title }}">
+  <meta property="twitter:description" content="{{ seo.description }}">
+  {% if seo.image %}
+  <meta property="twitter:image" content="{{ seo.image }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+  <!--
+  <script defer src="{{ '/assets/script.js' }}"></script>
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+<div id="wrapper" class="flex flex-col h-screen justify-between">
+
+  <div id="header" class="md:grid md:grid-cols-[1fr_auto_1fr] md:px-8 md:mt-3 bg-white">
+
+    <div id="navbar" class="flex justify-center md:justify-start">
+      {% include 'navbar.njk' %}
+    </div>
+
+    <div id="logo" class="flex justify-center my-7 md:my-0">
+      <a href="/" class="flex items-center md:h-16">
+        {% image {src: "./src/assets/images/logo.png", format: "png", size: 48, alt: "kreativan logo", loading: "eager" } %}
+      </a>
+    </div>
+
+    <div id="links" class="flex justify-end items-center md:h-16 invisible md:visible">
+      {% for item in meta.social %}
+        <a class="hover:scale-110 hover:transition-transform" href="{{ item.link }}" target="_blank" rel="nofollow" title="{{ item.name }}">
+          {{ item.icon | svgContents("h-6 md:ml-5") | safe }}
+        </a>
+      {% endfor %}
+     </div>
+
+  </div>
+
+  <main class="mb-auto">
+    {{ content | safe }}
+  </main>
+  
+  <footer class="block text-center">
+    <div class="inline-block mx-auto text-center">
+      {% image {src: "./src/assets/images/logo.png", format: "png", size: 36, alt: "kreativan logo" } %}
+    </div>
+    <div>
+      <a class="text-lg" href="mailto: {{ meta.email }}">
+        {{ meta.email }}
+      </a>
+    </div>
+    <p class="mb-5 mt-5 text-sm text-neutral-500">&copy; {% year %} {{ meta.name }}</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

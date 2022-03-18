@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Code étoile",
+    "link": "https://codetoile.com",
+    "image": "./src/assets/portfolio/code-etoile.png",
+    "type": "website"
+  },
+  {
+    "title": "Valdex",
+    "link": "https://valdex.bg",
+    "image": "",
+    "type": "website"
+  }
+]

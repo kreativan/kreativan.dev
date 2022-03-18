@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>/</loc>
+    <lastmod>2022-03-16T12:11:01.657Z</lastmod>
+  </url>
+
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2022-03-16T12:13:51.578Z</lastmod>
+  </url>
+
+  <url>
+    <loc>/portfolio/</loc>
+    <lastmod>2022-03-16T12:14:14.963Z</lastmod>
+  </url>
+
+  <url>
+    <loc>/hire-me/</loc>
+    <lastmod>2022-03-16T12:14:57.715Z</lastmod>
+  </url>
+
+</urlset>
