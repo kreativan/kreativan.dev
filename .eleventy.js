@@ -1,6 +1,6 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const { DateTime } = require("luxon");
 const svgContents = require("eleventy-plugin-svg-contents");
+const htmlmin = require("html-minifier");
 
 //
 // 11ty Image 
@@ -41,6 +41,7 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough copy files and watch targets
   eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("./src/_redirects");
   eleventyConfig.addPassthroughCopy("./src/assets/script.js");
   eleventyConfig.addPassthroughCopy("./src/assets/images/");
   eleventyConfig.addPassthroughCopy("./src/assets/portfolio/");
@@ -103,6 +104,22 @@ module.exports = function(eleventyConfig) {
    * @example {% year %}
    */
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+
+  /**
+   * Minify HTML
+   */
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath && outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
+  });
 
   return {
     dir: {
