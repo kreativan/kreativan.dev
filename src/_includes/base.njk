@@ -28,6 +28,8 @@
   <meta property="twitter:image" content="{{ seo.image }}">
   {% endif %}
 
+  <meta name="generator" content="Eleventy">
+
   <link rel="preload" as="style" href="{{ '/assets/style.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
   <!--
@@ -80,7 +82,7 @@
         {{ meta.email }}
       </a>
     </div>
-    <p class="mb-5 mt-5 text-sm text-neutral-500">&copy; {% year %} {{ meta.name }}</p>
+    <p class="mb-5 mt-5 text-sm text-neutral-500">&copy; {% year %} {{ meta.name }}. Built with Eleventy</p>
   </footer>
 
 </div>
