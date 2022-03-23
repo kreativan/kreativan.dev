@@ -1,7 +1,7 @@
 module.exports = {
   name: "kreativan.dev",
   description: "Web Development",
-  website: "www.kreativan.dev",
+  website: "https://kreativan.dev",
   email: "hello@kreativan.dev",
   location: "Sofia, Bulgaria",
   author: "Ivan Milinčić",
