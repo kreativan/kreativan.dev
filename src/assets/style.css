@@ -14,8 +14,12 @@
     @apply font-medium;
   }
 
-  h1 em, h2 em, h3 em, h4 em {
+  h1 em, h2 em, h3 b, h4 em {
     @apply font-bold uppercase italic;
+  }
+
+  h1 b, h2 b, h3 b, h4 b {
+    @apply font-bold uppercase;
   }
 
 }

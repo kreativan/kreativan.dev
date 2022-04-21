@@ -6,7 +6,7 @@ seo:
   description: "I'm a Serbian web developer working from Sofia, Bulgaria. Very passionate about web and tech in general. I'm in tech for a long time, in different shapes and forms, but found my self in web development, and that is what i really love and enjoy doing."
 
 title: About
-headline: <em>About</em> Me
+headline: <b>About</b> Me
 about: I'm a Serbian web developer working from Sofia, Bulgaria. Very passionate about web and tech in general. I'm in tech for a long time, in different shapes and forms, but found my self in web development, and that is what i really love and enjoy doing.
 
 eleventyNavigation:
@@ -15,7 +15,7 @@ eleventyNavigation:
   order: 1
 
 education: 
-  title: <em>University</em> Education
+  title: <b>University</b> Education
   text: I have <b>Bachelor's Degree in Information Technology</b>, from Academy of Professional Studies in Serbia. I have studied Information Technology and gained educational title <b>IT engineer</b>.
 
 exp:
@@ -46,13 +46,13 @@ tech:
   <h2 class="text-3xl mb-3">{{ education.title | safe }}</h2>
   <p>{{ education.text | safe }}</p>
 
-  <h2 class="text-3xl mb-3 mt-10"><em>Work</em> Expiriance</h2>
+  <h2 class="text-3xl mb-3 mt-10"><b>Work</b> Expiriance</h2>
 
   {% for paragraph in exp %}
     <p class="mb-3">{{ paragraph }}</p>
   {% endfor %}
 
-  <h2 class="text-3xl mb-3 mt-10"><em>Tech</em> Stack</h2>
+  <h2 class="text-3xl mb-3 mt-10"><b>Tech</b> Stack</h2>
 
   <p>{{ stack | safe }}.</p>
 
