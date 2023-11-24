@@ -1,0 +1,71 @@
+@subnav-margin-horizontal: 30px;
+
+@subnav-item-color: @global-muted-color;
+@subnav-item-hover-color: @global-primary-background;
+@subnav-item-hover-text-decoration: none;
+@subnav-item-active-color: @global-primary-background;
+
+@subnav-divider-margin-horizontal: 20px;
+@subnav-divider-border-height: 1.5em;
+@subnav-divider-border-width: @global-border-width;
+@subnav-divider-border: @global-border;
+
+@subnav-pill-item-padding-vertical: 5px;
+@subnav-pill-item-padding-horizontal: 10px;
+@subnav-pill-item-background: transparent;
+@subnav-pill-item-color: @subnav-item-color;
+@subnav-pill-item-hover-background: @global-muted-background;
+@subnav-pill-item-hover-color: @global-color;
+@subnav-pill-item-onclick-background: @subnav-pill-item-hover-background;
+@subnav-pill-item-onclick-color: @subnav-pill-item-hover-color;
+@subnav-pill-item-active-background: @global-primary-background;
+@subnav-pill-item-active-color: @global-inverse-color;
+
+@subnav-item-disabled-color: @global-muted-color;
+
+
+/* ========================================================================
+  Component: Subnav
+========================================================================== */
+
+.hook-subnav-item() {
+  font-size: 0.85rem;
+}
+
+/*
+.hook-subnav-item-hover() {
+  background: linear-gradient(45deg, @tm-bg-1 30%, @tm-bg-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
+
+.hook-subnav-item-active() {
+  background: linear-gradient(45deg, @tm-bg-1 30%, @tm-bg-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
+*/
+
+.hook-subnav() {
+  &.tm-subnav-styled {
+
+    li > a {
+      transition: transform 0.1s ease-in;
+      color: @global-emphasis-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+
+    li.uk-active > a,
+    li:hover > a {
+      background: linear-gradient(45deg, @tm-bg-1 30%, @tm-bg-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: scale(1.2);
+    }
+  }
+}

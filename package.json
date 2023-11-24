@@ -1,36 +1,19 @@
 {
-  "name": "kreativan.dev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "start": "npm-run-all --parallel start:*",
-    "start:11ty": "eleventy --serve",
-    "start:tailwind": "npx tailwindcss -i src/assets/style.css -o public/assets/style.css --watch",
-    "build": "npm-run-all --parallel build:*",
-    "build:11ty": "eleventy",
-    "build:postcss": "postcss src/assets/style.css -o public/assets/style.css"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [],
-  "author": "Ivan Milincic",
-  "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-fetch": "^3.0.0",
-    "dotenv": "^16.0.0",
-    "eleventy-plugin-svg-contents": "^0.7.0",
-    "save-dev": "^0.0.1-security"
-  },
-  "devDependencies": {
-    "@11ty/eleventy-img": "^1.0.0",
-    "@11ty/eleventy-navigation": "^0.3.2",
-    "autoprefixer": "^10.4.2",
-    "cssnano": "^5.1.0",
-    "html-minifier": "^4.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.8",
-    "postcss-cli": "^9.1.0",
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^3.0.23"
+    "@astrojs/vue": "^3.0.4",
+    "astro": "^3.5.7",
+    "astro-icon": "^0.8.1",
+    "less": "^4.2.0",
+    "vue": "^3.3.8"
   }
 }

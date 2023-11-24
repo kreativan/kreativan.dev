@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+
+import logo from "../images/logo.png";
+
+import { getCollection, getEntry } from "astro:content";
+const social = await getEntry("all", "social");
+
+const pathname = Astro.url.pathname;
+---
+
+<div id="header" class="uk-container uk-container-expand">
+  <div class="uk-flex uk-flex-middle uk-flex-between uk-position-relative">
+    <div class="left">
+      <ul class="uk-subnav tm-subnav-styled">
+        <li class={pathname == "/" ? "uk-active" : ""}>
+          <a href="/">Home</a>
+        </li>
+        <li class={pathname == "/about/" ? "uk-active" : ""}>
+          <a href="/about/">About</a>
+        </li>
+        <li class={pathname == "/hire-me/" ? "uk-active" : ""}>
+          <a href="/hire-me/">Hire Me</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="center uk-text-center">
+      <a href="/">
+        <Image src={logo} alt="Kreativan Logo" height="40" />
+      </a>
+    </div>
+
+    <div class="right uk-visible@m">
+      {
+        social.data.map((item) => (
+          <a
+            href={item.link}
+            class="uk-link-reset uk-text-emphasis uk-margin-small-left"
+          >
+            <Icon name={item.icon} width="26" height="26" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>

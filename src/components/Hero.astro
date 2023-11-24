@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import ivan from "../images/ivan-milincic-web-developer.jpeg";
+
+let { title, text } = Astro.props;
+title = title ? title.replace(/\[(.*?)\]/g, "<strong>$1</strong>") : "";
+---
+
+<section id="hero" class="uk-margin-xlarge">
+  <div class="uk-container uk-container-large">
+    <div class="uk-flex uk-flex-center">
+      <div
+        class="uk-grid uk-flex-middle uk-flex-center uk-grid-divider tm-divider-gradient uk-grid-large"
+        uk-grid
+      >
+        <div class="uk-width-large@m uk-width-medium">
+          <div class="uk-text-center">
+            <Image
+              src={ivan}
+              alt="Ivan Milincic - Web Developer"
+              class="uk-border-circle uk-box-shadow-large"
+              width="310"
+              height="310"
+            />
+            <ul class="uk-list uk-list-collapse uk-margin-remove-bottom">
+              <li>Web Developer</li>
+              <li class="uk-text-small">Sofia, Bulgaria</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="uk-width-expand@m">
+          <div>
+            <h1 class="uk-heading-medium" set:html={title} />
+            <h3
+              set:html={text}
+              class="uk-h3 tm-font-base tm-text-base uk-width-xlarge uk-margin-medium"
+            />
+            <div class="uk-margin-medium-top">
+              <a
+                href="https://portfolio.kreativan.dev"
+                class="uk-button tm-button-gradient uk-button-large uk-margin-right"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <span>Portfolio</span>
+              </a>
+              <a
+                href="/hire-me/"
+                class="uk-button uk-button-primary uk-button-large uk-box-shadow-medium"
+              >
+                <span>Hire Me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "title": "Hello! <br /> I'm <b>Ivan Milincic</b>...",
+    "text": "A freelance <b>web developer</b> with a passion for crafting high-quality custom websites."
+  },
+  "intro": {
+    "title": "Professional [Web Development]",
+    "text": "Web design and development is my full time job. Not a side work or a hobby! I'm completely dedicated to my clients and projects, offering professional service and long term support. I cover all aspects of your website, from design and development to hosting, maintenance, and content management."
+  },
+  "services": {
+    "title": "My Web <strong>Services</strong> Offerings"
+  },
+  "outsourcing": {
+    "title": "[Outsourcing] Services",
+    "text": "Freelance web development and outsourcing services for digital agencies with long-term support and competitive pricing. There is no employment bureaucracy and additional costs for you. We just focus on work and to get things done!"
+  }
+}

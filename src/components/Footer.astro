@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
+---
+
+<div id="footer" class="uk-margin-large-bottom uk-text-center">
+  <div class="uk-margin">
+    <Image src={logo} alt="Kreativan Logo" height="32" />
+  </div>
+
+  <div class="uk-margin">
+    <a href="mailto: hello@kreativan.dev" class="uk-text-large uk-link-reset">
+      <span class="uk-text-emphasis"> hello@kreativan.dev</span>
+    </a>
+  </div>
+
+  <ul class="uk-subnav uk-subnav-divider uk-flex-center">
+    <li>
+      <a href="">About</a>
+    </li>
+    <li>
+      <a
+        href="https://portfolio.kreativan.dev"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Portfolio
+      </a>
+    </li>
+    <li>
+      <a href="/hire-me/">Hire Me</a>
+    </li>
+  </ul>
+  <small class="uk-text-muted">Copyright © 2023 Ivan Milincic.</small>
+</div>

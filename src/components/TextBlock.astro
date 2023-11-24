@@ -1,0 +1,12 @@
+---
+let { title, text, align } = Astro.props;
+// replace [] with <span>
+title = title.replace(
+  /\[(.*?)\]/g,
+  "<strong class='tm-text-900 tm-text-gradient'>$1</strong>",
+);
+align = align ? align : "justify";
+---
+
+<h2 class="uk-h2 uk-text-uppercase uk-text-center" set:html={title} />
+<p class=`uk-text-large uk-text-${align} tm-line-height-l` set:html={text} />

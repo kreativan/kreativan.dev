@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import BoxGrid from "../components/BoxGrid.astro";
+import TextBlock from "../components/TextBlock.astro";
+import Divider from "../components/Divider.astro";
+
+import { getCollection, getEntry } from "astro:content";
+
+const all = await getEntry("all", "home");
+const servicesItems = await getEntry("all", "services");
+
+const hero = all.data.hero;
+const intro = all.data.intro;
+const services = all.data.services;
+const outsourcing = all.data.outsourcing;
+---
+
+<Layout title="Ivan Milincic - Freelance Web Developer">
+	<Hero title={hero.title} text={hero.text} />
+
+	<Divider />
+
+	<section class="uk-margin-xlarge">
+		<div class="uk-container uk-container-small">
+			<TextBlock title={intro.title} text={intro.text} />
+		</div>
+	</section>
+
+	<section class="uk-margin-xlarge">
+		<div class="uk-container">
+			<h2
+				class="uk-h2 uk-text-uppercase uk-text-center uk-margin-medium"
+				set:html={services.title}
+			/>
+			<BoxGrid items={servicesItems.data} padding="large" />
+		</div>
+	</section>
+
+	<section class="uk-margin-xlarge">
+		<div class="uk-container uk-container-small">
+			<TextBlock title={outsourcing.title} text={outsourcing.text} />
+		</div>
+	</section>
+</Layout>

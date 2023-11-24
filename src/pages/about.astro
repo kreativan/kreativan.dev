@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import PageHeading from "../components/PageHeading.astro";
+import BoxGrid from "../components/BoxGrid.astro";
+
+import { getCollection, getEntry } from "astro:content";
+const tech = await getEntry("all", "tech");
+---
+
+<Layout title="Ivan Milincic - About Me">
+  <article class="uk-section">
+    <heading>
+      <PageHeading title="[About] Me" />
+    </heading>
+
+    <section class="uk-container uk-container-small">
+      <p>
+        I'm Serbian living and working from Sofia, Bulgaria. I hold a Bachelor's
+        Degree in Information Technology from the Academy of Professional
+        Studies in Serbia, and a strong passion for web development and
+        technology in general. Over the years, I have explored various aspects
+        of the tech industry, but I have discovered my true calling in web
+        development, which is a field I genuinely love and enjoy.
+      </p>
+    </section>
+
+    <section class="uk-container uk-container-small uk-margin-medium">
+      <h2 class="uk-text-uppercase">
+        Tech
+        <strong class="tm-text-900">Journey</strong>
+      </h2>
+
+      <p>
+        I have worked on a wide range of projects, ranging from simple websites
+        to custom CRM systems. I have had the opportunity to work in both small
+        teams and as a solo developer, effectively managing entire projects
+        independently.
+      </p>
+
+      <p>
+        During my career, I have gained a comprehensive understanding of
+        different CMS platforms and their respective strengths. ProcessWire has
+        become my primary area of expertise, where I have developed a deep
+        understanding of its capabilities and nuances.
+      </p>
+
+      <p>
+        I have a strong passion towards front-end development and enjoy engaging
+        in more creative work. However, throughout my professional journey, I
+        have found myself gravitating towards the middle ground, embracing
+        full-stack development using popular open-source platforms.
+      </p>
+
+      <p>
+        My journey goes beyond writing code. I craft custom designs, provide
+        hosting and DNS intricacies, manage servers, contribute to
+        graphic-related work, and offer consulting and support. This
+        comprehensive approach ensures that my clients' projects aren't just
+        developed but carefully crafted and well maintained.
+      </p>
+    </section>
+
+    <section>
+      <div class="uk-container uk-container-small">
+        <h2 class="uk-text-uppercase">
+          My <strong class="tm-text-900">Tech</strong>
+           Stack
+        </h2>
+        <p>
+          I have the ability to work with any PHP-based CMS system, leveraging
+          my proficiency in HTML, CSS, JavaScript, and PHP.
+        </p>
+        <BoxGrid
+          items={tech.data}
+          grid="1-2"
+          cls="uk-margin-medium-top uk-text-small"
+          masonry="true"
+        />
+      </div>
+    </section>
+  </article>
+</Layout>

@@ -1,0 +1,27 @@
+{
+  "why": [
+    {
+      "title": "Experience?",
+      "text": "With over a decade of expertise, I bring seasoned knowledge to every project. I'm here to consult and guide you, ensuring your project reaches its full potential.",
+      "icon": "lamp"
+    },
+    {
+      "title": "End-To-End Development",
+      "text": "I can effectively manage entire project independently, all aspects from design and development to deployment and long-term support.",
+      "icon": "code-dots"
+    },
+    {
+      "title": "Cost-Effective",
+      "text": "Quality work doesn't have to break the bank. Enjoy my competitive rates without compromising on quality and employment bureaucracy.",
+      "icon": "pig"
+    }
+  ],
+  "booking": {
+    "title": "Book a Meeting",
+    "text": "Ready to discuss your project? Let's chat! Use the calendar below to book a meeting at your convenience."
+  },
+  "comm": {
+    "title": "Prefer Email Communication?",
+    "text": "If it's more convenient for you, feel free to drop me an email detailing your project. I'll promptly get back to you with a personalized quote or proposal."
+  }
+}

@@ -1,0 +1,50 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+
+import { ViewTransitions } from "astro:transitions";
+
+import Meta from "../components/Meta.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Cal from "../components/Cal.astro";
+import Divider from "../components/Divider.astro";
+
+import "../../public/less/_import.less";
+import Divider from "../components/Divider.astro";
+
+const desc = description
+	? description
+	: "Ivan Milincic, a freelance web developer based in Sofia, Bulgaria. Crafting high-quality custom websites, I bring a decade of expertise to elevate your online presence. From bespoke designs to strategic consulting, let's turn your digital vision into a reality.";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/fonts/fonts.css" />
+		<script defer type="text/javascript" src="/uikit/dist/js/uikit-core.min.js"
+		></script>
+		<Meta
+			title={title}
+			description={desc}
+			url={`https://kreativan.dev${Astro.url.pathname}`}
+		/>
+		<ViewTransitions />
+	</head>
+
+	<body>
+		<Header />
+		<slot />
+		<Divider />
+		<Footer />
+		<Cal />
+	</body>
+</html>

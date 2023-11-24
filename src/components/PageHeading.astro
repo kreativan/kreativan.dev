@@ -1,0 +1,9 @@
+---
+let { title } = Astro.props;
+title = title.replace(
+  /\[(.*?)\]/g,
+  "<strong class='tm-text-900 uk-text-uppercase tm-text-gradient'>$1</strong>",
+);
+---
+
+<h1 class="uk-heading-medium uk-text-center uk-margin-large" set:html={title} />

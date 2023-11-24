@@ -1,0 +1,16 @@
+---
+import divider from "../images/divider.png";
+let { margin } = Astro.props;
+margin = margin || "large";
+---
+
+<div
+  class=`tm-divider uk-text-center uk-container uk-container-expand uk-margin-${margin}`
+>
+  <img
+    src={divider.src}
+    alt="divider"
+    class="uk-margin-large uk-margin-auto"
+    style="height:1px;"
+  />
+</div>

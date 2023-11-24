@@ -1,0 +1,62 @@
+[
+  {
+    "title": "CSS",
+    "text": "I am highly proficient in CSS and effective use of CSS frameworks.",
+    "grid": "1-3",
+    "icon": "css"
+  },
+  {
+    "title": "JavaScript",
+    "text": "Vanilla JavaScript, Ajax, libraries and consuming APIs.",
+    "grid": "1-3",
+    "icon": "js"
+  },
+  {
+    "title": "PHP",
+    "text": "Customizing open-source platforms and writing custom logic in vanilla PHP.",
+    "grid": "1-3",
+    "icon": "php"
+  },
+  {
+    "title": "ProcessWire",
+    "text": "My primary development platform for crafting custom websites and web applications.",
+    "grid": "1-1",
+    "icon": "processwire"
+  },
+  {
+    "title": "WordPress",
+    "text": "Custom websites using advanced custom fields and custom post types, using core wordpress API beyond the limitations of page builders.",
+    "grid": "1-2",
+    "icon": "wordpress"
+  },
+  {
+    "title": "WooCommerce",
+    "text": "Utilizing WooCommerce as the default e-commerce platform, integrating vast plugins and advanced custom fields for tailored webshops.",
+    "grid": "1-2",
+    "icon": "woocommerce"
+  },
+  {
+    "title": "JAMStack",
+    "text": "Enjoy working with modern static site generators such as 11ty, Astro, or Nuxt within the JAMstack architecture.",
+    "grid": "1-2",
+    "icon": "astro"
+  },
+  {
+    "title": "HTMX",
+    "text": "Leveraging htmx for creating dynamic content and achieving SPA-like navigation and features, enhancing the user experience.",
+    "grid": "1-2",
+    "icon": "htmx"
+  },
+  {
+    "title": "UIkit",
+    "text": "My favorite CSS framework. It resonate with my development style and allow me to create web interfaces efficiently.",
+    "grid": "1-2",
+    "icon": "uikit"
+  },
+  {
+    "title": "TailwindCSS",
+    "text": "Mainly using it when working with JAMstack and static site generators.",
+    "grid": "1-2",
+    "icon": "tailwind"
+  }
+]
