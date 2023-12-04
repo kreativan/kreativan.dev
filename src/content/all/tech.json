@@ -7,7 +7,7 @@
   },
   {
     "title": "JavaScript",
-    "text": "Vanilla JavaScript, Ajax, libraries and consuming APIs.",
+    "text": "Vanilla JavaScript, DOM, Ajax, libraries and consuming APIs.",
     "grid": "1-3",
     "icon": "js"
   },
@@ -25,37 +25,37 @@
   },
   {
     "title": "WordPress",
-    "text": "Custom websites using advanced custom fields and custom post types, using core wordpress API beyond the limitations of page builders.",
+    "text": "Websites with advanced custom fields, custom post types and core wordpress API.",
     "grid": "1-2",
     "icon": "wordpress"
   },
   {
     "title": "WooCommerce",
-    "text": "Utilizing WooCommerce as the default e-commerce platform, integrating vast plugins and advanced custom fields for tailored webshops.",
+    "text": "E-commerce development with vast plugin eco-system and ACF for custom features.",
     "grid": "1-2",
     "icon": "woocommerce"
   },
   {
     "title": "JAMStack",
-    "text": "Enjoy working with modern static site generators such as 11ty, Astro, or Nuxt within the JAMstack architecture.",
+    "text": "Static websites (SSG) with Astro, 11ty or Nuxt within the JAMstack architecture.",
     "grid": "1-2",
     "icon": "astro"
   },
   {
     "title": "HTMX",
-    "text": "Leveraging htmx for creating dynamic content and achieving SPA-like navigation and features, enhancing the user experience.",
+    "text": "Hypermedia for creating dynamic content, Ajax and SPA-like navigation and features.",
     "grid": "1-2",
     "icon": "htmx"
   },
   {
     "title": "UIkit",
-    "text": "My favorite CSS framework. It resonate with my development style and allow me to create web interfaces efficiently.",
+    "text": "My favorite CSS framework when building projects with a php based CMS.",
     "grid": "1-2",
     "icon": "uikit"
   },
   {
     "title": "TailwindCSS",
-    "text": "Mainly using it when working with JAMstack and static site generators.",
+    "text": "When working with JAMstack and static site generators.",
     "grid": "1-2",
     "icon": "tailwind"
   }

@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+
+let { items, grid, grid_size, padding, cls, masonry } = Astro.props;
+grid = grid || "1-3";
+grid_size = grid_size ? ` uk-grid-${grid_size}` : "";
+padding = padding ? `-${padding}` : "";
+cls = cls ? ` ${cls}` : "";
+masonry = masonry ? "masonry: true" : "";
+---
+
+<div class={`uk-grid ${grid_size} uk-child-width-${grid}@m`} uk-grid={masonry}>
+  {
+    items.map((item) => (
+      <div>
+        <h3 class="uk-h4 uk-margin-small">
+          {item.icon && (
+            <Icon
+              class="uk-margin-small-right"
+              name={item.icon}
+              width="22"
+              height="22"
+            />
+          )}
+          {item.title}
+        </h3>
+        <p class="uk-margin-small uk-text-small" set:html={item.text} />
+      </div>
+    ))
+  }
+</div>
